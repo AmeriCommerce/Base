@@ -1,0 +1,128 @@
+<ac:pagelayout id="OrderVerifyPage">
+  
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  
+  $$CHECKOUTPROGRESS$$
+  <div class="CheckOutHeader">Please review and submit your order</div>
+  <div style="FLOAT:right">
+    $$PLACEORDERBUTTON1$$
+  </div>
+  <div class="CheckOutSubHeader">Review the information below, then click "Place your 
+    order."</div>
+  <div style="CLEAR:both"></div>
+  <table width="100%">
+    <tr>
+      <td valign="top" width="70%">
+        <div>$$ERRORTEXT$$</div>
+        <div class="OrderDetailsShippingHeader">Order Details</div>
+        <div class="OrderDetailsSectionSubHeader">
+          $$SHIPPINGHEADER$$
+          $$CHANGESHIPPINGADDRESSBUTTON$$
+        </div>
+        <div style="PADDING-BOTTOM:10px">
+          $$SHIPPINGADDRESS$$
+        </div>
+        <div class="OrderDetailsSectionSubHeader">
+          $$SHIPPINGMETHODHEADER$$
+          $$CHANGESHIPPINGMETHODBUTTON$$
+        </div>
+        <div style="PADDING-BOTTOM:10px">
+          $$SHIPPINGMETHOD$$
+        </div>
+        $$PUBLICCOMMENTS$$
+        $$GIFTMESSAGE$$
+        <div class="OrderDetailsSectionSubHeader">
+          The following items are in this order:
+        </div>
+        <div class="CheckOutText" style="PADDING-BOTTOM:10px">
+          $$UPDATESHOPPINGCARTLINK$$
+        </div>
+        <div>
+          <ac:layoutarea id="CartItems">
+            <div class="OrderDetailsOrderItems" style="padding-bottom:10px">
+              <div class="OrderDetailsItemName">
+                $$ITEMNAME$$
+              </div>
+              <div class="OrderDetailsItemNr">
+                $$ITEMNR$$
+              </div>
+              <div>
+                <span class="OrderDetailsItemPrice">
+                  $$PRICE$$
+                </span>
+                <span class="OrderDetailsItemQuantity">
+                  - Quantity:
+                  $$QUANTITY$$
+                </span>
+              </div>
+            </div>
+          </ac:layoutarea>
+        </div>
+        <div class="attentionText">$$SPECIALINSTRUCTIONS$$</div>
+        $$ADDITIONALINFO$$
+      </td>
+      <td valign="top">
+        <div class="OrderDetailsSummaryHeader">
+          Order Summary
+        </div>
+        <div style="CLEAR:both">
+          <span class="OrderDetailsSummaryText" style="FLOAT:left">Items:</span>
+          <span class="OrderDetailsSummaryText" style="FLOAT:right">
+            $$SUBTOTAL$$
+          </span>
+        </div>
+        <div style="CLEAR:both">
+          <span class="OrderDetailsSummaryText" style="FLOAT:left">Shipping:</span>
+          <span class="OrderDetailsSummaryText" style="FLOAT:right">
+            $$SHIPPING$$
+          </span>
+        </div>
+        $$HANDLING$$
+        <div style="CLEAR:both">
+          $$SHIPPINGNOTICE$$
+        </div>
+        <hr style="CLEAR:both;HEIGHT:1px">
+        $$DISCOUNT$$
+        <div style="CLEAR:both">
+          <span class="OrderDetailsSummaryText" style="FLOAT:left">Total Before Tax:</span>
+          <span class="OrderDetailsSummaryText" style="FLOAT:right">
+            $$TOTALBEFORETAX$$
+          </span>
+        </div>
+        <div style="CLEAR:both">
+          <span class="OrderDetailsSummaryText" style="FLOAT:left">Estimated Tax:</span>
+          <span style="FLOAT:right">
+            $$TAX$$
+          </span>
+        </div>
+        $$ADDITIONALFEES$$
+        <div class="OrderDetailsTotal" style="CLEAR:both; PADDING-BOTTOM:10px">
+          Order Total:
+          $$TOTAL$$
+        </div>
+        <div class="OrderDetailsSectionSubHeader">
+          Payment Method:
+          $$CHANGEPAYMENTMETHODBUTTON$$
+        </div>
+        <div style="PADDING-BOTTOM:10px">
+          $$PAYMENTMETHOD$$
+        </div>
+        $$BILLINGADDRESSHEADER$$
+        <div style="PADDING-BOTTOM:10px">
+          $$BILLINGADDRESS$$
+        </div>
+        $$COUPONCODE$$
+      </td>
+    </tr>
+  </table>
+  <div style="FLOAT:right">
+    $$PLACEORDERBUTTON2$$
+  </div>
+  <div class="CheckOutSubHeader">Review the information above, then click "Place your 
+    order."</div>
+  
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  
+</ac:pagelayout>

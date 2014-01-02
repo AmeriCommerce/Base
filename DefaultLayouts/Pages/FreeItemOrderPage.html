@@ -1,0 +1,89 @@
+<ac:pagelayout id="FreeItemOrderPage">
+  
+  <div align="center">
+    $$ERRORTEXT$$
+  </div>
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  <div>
+    <table id="tblCart" class="ShoppingCart" style="width:100%">
+      <tbody>
+        <ac:layoutarea id="ProductList">
+          <tr>
+            <td class="ShoppingCart" style="width:50%">
+              $$PRODUCTTHUMBNAIL$$
+              $$ITEMID$$
+              $$ITEMNAME$$
+              $$ITEMNR$$
+            </td>
+            <td class="ShoppingCart">
+              $$DESCRIPTION$$
+            </td>
+            <td align="center" class="ShoppingCart" nowrap="">
+              $$QUANTITY$$
+            </td>
+          </tr>
+        </ac:layoutarea>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <!--Begin Existing Customer Info-->
+  <div id="divShippingInfo" runat="server">
+    <div id="divExistingCustomer" runat="server">
+      <div class="CheckOutHeader">
+        $$EXISTINGCUSTOMERSHEADER$$
+      </div>
+      <div class="CheckOutText" style="HEIGHT:45px"><br>
+        If you have an account, $$LOGINLINK$$.<br><br>
+      </div>
+    </div>
+    <div style="clear:both"></div>
+    <div class="CheckOutHeader">
+      $$NEWCUSTOMERSTEXT$$<br><br>
+    </div>
+    <div style="clear:both"></div>
+    <div class="CheckOutSubHeader">
+      $$STEP1$$.
+      $$ADDRESSHEADER$$
+    </div>
+    <div>
+      $$ADDRESSEDITOR$$
+    </div>
+  </div>
+  <!--End Existing Customer Info-->
+  <!--Begin Registration-->
+  <div id="divRegistration" runat="server">
+    <div class="CheckOutSubHeader">$$STEP2$$. 
+      <!-- Account Password -->
+      $$ACCOUNTPASSWORDHEADER$$
+    </div>
+    <div class="CheckOutText" style="PADDING-LEFT:2px;padding-bottom:6px">
+      $$ACCOUNTPASSWORDTEXT$$
+    </div>
+    <div>
+      <div class="CheckOutText" style="width:150px;float:left;height:28px;">
+        <!--Choose a password:-->
+        $$CHOOSEPASSWORDTEXT$$
+      </div>
+      <div class="CheckOutText">
+        $$PASSWORDTEXTBOX1$$
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="CheckOutText" style="width:150px;float:left;height:28px">
+      <!--Repeat password:-->
+      $$REPEATPASSWORDTEXT$$
+    </div>
+    <div class="CheckOutText">
+      $$PASSWORDTEXTBOX2$$
+    </div>
+  </div>
+  <!--EndRegitration-->
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  <div style="padding-top:10px;float:right;">
+    $$PLACEORDERBUTTON$$
+  </div>
+  
+</ac:pagelayout>

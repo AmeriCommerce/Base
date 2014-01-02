@@ -1,0 +1,51 @@
+<ac:pagelayout id="NewCustomerPage">
+  
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  
+  $$CHECKOUTPROGRESS$$
+  <div class="CheckOutHeader">New to $$STORENAME$$? Register below.</div>
+  <table id="Table1" cellspacing="1" cellpadding="1" border="0">
+    $$ERRORTEXT$$
+    <tr>
+      <td class="CheckOutText" style="text-align:right">$$NAMETEXT$$</td>
+      <td>$$NAMETEXTBOX$$
+        $$NAMELABEL$$
+      </td>
+    </tr>
+    <tr>
+      <td class="CheckOutText" style="text-align:right">$$EMAILADDRESSTEXT$$</td>
+      <td>$$EMAILADDRESSTEXTBOX1$$
+        $$EMAILADDRESSLABEL$$
+      </td>
+    </tr>
+    <tr>
+      <td class="CheckOutText" style="text-align:right">$$REPEATEMAILADDRESSTEXT$$</td>
+      <td>$$EMAILADDRESSTEXTBOX2$$</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="CheckOutSubHeader"><br><!--Protect your account with a password--></div>$$PASSWORDDESCRIPTIONSUBHEADER$$
+        <div class="CheckOutText"><!--You will use this every time you log in to this site.-->$$PASSWORDDESCRIPTION$$</div>
+      </td>
+    </tr>
+    <tr>
+      <td class="CheckOutText" style="text-align:right">$$PASSWORDTEXT$$</td>
+      <td>$$PASSWORDTEXTBOX1$$
+        $$PASSWORDLABEL$$</td>
+    </tr>
+    <tr>
+      <td class="CheckOutText" style="text-align:right">$$REPEATPASSWORDTEXT$$</td>
+      <td>$$PASSWORDTEXTBOX2$$</td>
+    </tr>
+  </table>
+  
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  <div align="center">$$CONTINUEBUTTON$$</div>
+  
+</ac:pagelayout>

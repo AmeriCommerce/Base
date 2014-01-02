@@ -1,0 +1,56 @@
+<ac:pagelayout id="SharedWishListPage">
+  
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  <div class="breadcrumb"><a href="/">Home</a> &gt; Public Wish Lists</div>
+  <div class="page-header">
+    <h1>Public Wish Lists</h1>
+  </div>
+  <p>
+    
+    These are Wish Lists that others have created and marked as shared.  To find a Wish List, search below.
+  </p>
+  
+  <div class="pad-b-20">
+    <ul class="nav nav-pills">
+      <li><a href="WishList.aspx">Wish List</a></li>
+      <li><a href="SavedWishLists.aspx">Saved Wish Lists</a></li>
+      <li class="active"><a href="SharedWishList.aspx">Shared Wish Lists</a></li>
+    </ul>
+  </div>
+  <h2>Search Wish Lists</h2>
+  $$WISHLISTNAMETEXTBOX$$
+  $$SEARCHBUTTON$$
+  <div>$$ERRORTEXT$$</div>
+  <div class="wishlist-list">
+    <ac:layoutarea id="WishListItems">
+      <tr>
+        <td width="16px">
+          $$SELECTCHECKBOX$$
+          $$WISHLISTID$$
+        </td>
+        <td>$$WISHLISTNAME$$</td>
+        <td align="center">$$ENTERDATE$$</td>
+        
+      </tr>
+    </ac:layoutarea>
+  </div>
+  
+  
+  <script>
+    $(".wishlist-list > table").addClass("table");
+    var thead = $("<thead>");
+    
+    $(".wishlist-list > table > tbody > tr:first").appendTo(thead);
+    thead.prependTo(".wishlist-list > table");
+  </script>
+  <ac:visibilityarea id="btnMoveToCart">
+  <hr>
+  
+  <p>Move selected WishLIst to cart.</p>
+  $$MOVETOCARTBUTTON$$
+  </ac:visibilityarea>
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  
+</ac:pagelayout>

@@ -1,0 +1,171 @@
+<ac:templateoverridearea id="HeaderAddonArea">
+  <div class="panel">
+    <ac:widgetarea id="HomePageHeaderWidgets">
+<ac:widget id="SLIDESHOW2368" type="Slideshow" pause="6000" responsive="True">
+        <ul>
+          <li id='slide_1'>
+            <a href='' class='predefined_slide_item' target=''>
+              <img alt='' title='' src='/Shared/Themes/Base/images/banner4.jpg'>
+            </a>
+          </li>
+          <li id='slide_2'>
+            <a href='' class='predefined_slide_item' target=''>
+              <img alt='' title='' src='/Shared/Themes/Base/images/banner6.jpg'>
+            </a>
+          </li>
+          <li id='slide_3'>
+            <a href='' class='predefined_slide_item' target=''>
+              <img alt='' title='' src='/Shared/Themes/Base/images/banner5.jpg'>
+            </a>
+          </li>
+        </ul>
+      </ac:widget>
+</ac:widgetarea>
+  </div>
+</ac:templateoverridearea>
+<ac:templateoverridearea id="HeadTagsAddonArea"></ac:templateoverridearea>
+<ac:pagelayout id="DefaultPage">
+  <ac:widgetarea id="Top">
+<ac:widget id="HTML2372" type="HTML">
+      <div class="pad-b-40 center m-auto">
+        <h2>Base Theme</h2>
+
+        <p class="pad-t-10">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id justo tortor, pharetra fermentum risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec sit amet est vehicula tellus lobortis consectetur. Sed in dui tortor, vitae ullamcorper ligula. Nullam ac ultrices urna. Suspendisse potenti. Integer tempor venenatis iaculis. Etiam eget mauris ipsum, vitae euismod lorem. Phasellus posuere consequat felis, quis varius velit bibendum a. Morbi eleifend, libero nec sagittis semper, orci tellus porttitor lorem, ac sodales sem augue et augue.
+        </p>
+        <p>
+          <a href="/store/elements.aspx">View common typographic elements and their styling.</a>
+        </p>
+      </div>
+    </ac:widget>
+<ac:widget id="CATEGORYNAVIGATIONLINKS2373" type="CategoryNavigationLinks" rootcategorybehavior="0" headertext="Shop Categories:">
+      <ac:visibilityarea id="dvControl">
+        <div class="pad-20 pad-b-only">
+          <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="no-margin">$$HEADER$$</h3></div>
+            <div class="panel-body">
+              <ul class="nav nav-pills clearfix">
+                <ac:layoutarea id="Item">
+                  <li>
+                    <a href="$$CATEGORYHREF$$">
+                      $$CATEGORYICON$$
+                      $$CATEGORYNAME$$
+                    </a>
+                  </li>
+                </ac:layoutarea>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ac:visibilityarea>
+    </ac:widget>
+<ac:widget id="PRODUCTDISPLAY2370" type="ProductDisplay" repeatabletype="NewItems" productpicturewidth="250" categoryid="0" productpictureheight="250">
+      <ac:visibilityarea id="dvControl">
+        $$ADMINHELP$$
+        
+        <div class="pad-20 pad-b-only">
+          <div class="pad-b-10"><h3>$$HEADER$$</h3></div>
+          <div class="">
+            <ac:layoutarea id="Layout">
+              $$GROUP$$
+            </ac:layoutarea>
+            <ac:layoutarea id="Group">
+              <div class="row"> $$ITEM$$</div>
+            </ac:layoutarea>
+            <ac:layoutarea id="Item">
+              <div class="col-xs-12 col-sm-6 col-md-3 homepage-product">
+                <ac:visibilityarea id="dvControlItem">    
+                  <a href="##ITEMURL##" class="thumbnail rel no-overflow">
+                    <button class="btn btn-default quick-view abs" data-href="##ITEMURL##?previewlayoutname=Product%20Quick%20View" data-title="##ITEMNAME##">Quick View</button>
+                    <ac:visibilityarea id="Featured">
+                      <div class="abs product-flag left top featured"><span>Featured!</span></div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="Spotlight">
+                      <div class="abs product-flag left bottom spotlight"><span>Spotlight!</span></div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="Flag1">
+                      <div class="abs product-flag right top flag1"><span>New!</span></div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="Flag2">
+                      <div class="abs product-flag right bottom flag2"><span>Hot!</span></div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="Flag3">
+                      <div class="abs product-flag right bottom flag3"><span>Sale!</span></div>
+                    </ac:visibilityarea>
+                    $$PHOTO$$
+                  </a>
+                  <div class="caption center">
+                    <p><a class="h5 color-inherit" href="##ITEMURL##">##PRODUCTNAME##</a></p>
+                    <p class="text-muted">$$PRICE$$</p>
+                  </div>
+                  <!--
+<p class="hidden-xs center">
+<a class="btn btn-primary" href="##ADDTOCARTURL##">Buy</a>
+<a class="btn btn-default" href="##ITEMURL##">View</a>
+</p>
+-->
+                </ac:visibilityarea>
+              </div>
+            </ac:layoutarea>
+          </div>
+        </div>
+        
+      </ac:visibilityarea>
+    </ac:widget>
+<ac:widget id="PRODUCTDISPLAY2371" type="ProductDisplay" repeatabletype="FeaturedItems" productpicturewidth="250" categoryid="0" productpictureheight="250">
+      <ac:visibilityarea id="dvControl">
+        $$ADMINHELP$$
+        
+        <div class="pad-20 pad-b-only">
+          <div class="pad-b-10"><h3>$$HEADER$$</h3></div>
+          <div class="">
+            <ac:layoutarea id="Layout">
+              $$GROUP$$
+            </ac:layoutarea>
+            <ac:layoutarea id="Group">
+              <div class="row"> $$ITEM$$</div>
+            </ac:layoutarea>
+            <ac:layoutarea id="Item">
+              <div class="col-xs-12 col-sm-6 col-md-3 homepage-product">                
+                <ac:visibilityarea id="dvControlItem">    
+                  <a href="##ITEMURL##" class="thumbnail no-overflow rel">$$PHOTO$$
+                    <button class="btn btn-default quick-view abs" data-href="##ITEMURL##?previewlayoutname=Product%20Quick%20View" data-title="##ITEMNAME##">Quick View</button>
+                    <ac:visibilityarea id="Featured">
+                      <div class="abs product-flag left top featured"><span>Featured!</span></div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="Spotlight">
+                      <div class="abs product-flag left bottom spotlight"><span>Spotlight!</span></div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="Flag1">
+                      <div class="abs product-flag right top flag1"><span>New!</span></div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="Flag2">
+                      <div class="abs product-flag right bottom flag2"><span>Hot!</span></div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="Flag3">
+                      <div class="abs product-flag right bottom flag3"><span>Sale!</span></div>
+                    </ac:visibilityarea>
+                  </a>
+                  <div class="caption center">
+                    <p><a class="h5 color-inherit" href="##ITEMURL##">##PRODUCTNAME##</a></p>
+                    <p class="text-muted">$$PRICE$$</p>
+                  </div>
+                  <!--
+<p class="hidden-xs pad-10 center">
+<a class="btn btn-primary" href="##ADDTOCARTURL##">Buy</a>
+<a class="btn btn-default" href="##ITEMURL##">View</a>
+</p>
+-->
+                </ac:visibilityarea>
+              </div>
+            </ac:layoutarea>
+          </div>
+        </div>
+        
+      </ac:visibilityarea>
+    </ac:widget>
+</ac:widgetarea>
+  $$HOMEPAGECONTENT$$
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>

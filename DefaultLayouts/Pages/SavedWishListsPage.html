@@ -1,0 +1,59 @@
+<ac:pagelayout id="SavedWishListsPage">
+  
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  <div class="breadcrumb"><a href="/">Home</a> &gt; Saved Wish Lists</div>
+  <div class="page-header">
+    <h1>My Saved Wish Lists</h1>
+  </div>
+  <p>
+    
+    Manage your saved wish lists here. You may view, rename, delete, edit, and 
+    email wish lists in this area. Other features include the ability to create 
+    blank wish lists to add items to in the future, and also making your wish 
+    list public will make it viewable by any visitor under the public wish lists tab.
+  </p>
+  
+  <div class="pad-b-20">
+    <ul class="nav nav-pills">
+      <li><a href="WishList.aspx">Wish List</a></li>
+      <li class="active"><a href="SavedWishLists.aspx">Saved Wish Lists</a></li>
+      <li><a href="SharedWishList.aspx">Shared Wish Lists</a></li>
+    </ul>
+  </div>
+  $$NEWWISHLISTNAME$$
+  $$CREATEWISHLISTBUTTON$$
+  $$ERRORTEXT$$
+  
+  
+  <h2>Create and Rename</h2>
+  <div class="wishlist-list">
+    <ac:layoutarea id="WishLists">
+      <tr>
+        <td width="16px">
+          $$SELECTCHECKBOX$$
+        </td>
+        <td>
+          $$WISHLISTID$$
+          $$DELETEBUTTON$$</td>
+        <td>$$WISHLISTNAME$$</td>
+        <td>$$ENTERDATE$$</td>
+        <td>
+          $$SHAREDBUTTON$$</td>
+      </tr>
+    </ac:layoutarea>
+  </div>
+  <script>
+    $(".wishlist-list > table").addClass("table");
+    var thead = $("<thead>");
+    
+    $(".wishlist-list > table > tbody > tr:first").appendTo(thead);
+    thead.prependTo(".wishlist-list > table");
+  </script>
+  <hr>
+  <p>Move selected WishList to cart</p>
+  $$MOVETOCARTBUTTON$$
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  
+</ac:pagelayout>

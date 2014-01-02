@@ -1,0 +1,123 @@
+<ac:pagelayout id="ProfileEditPage">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  <div class="row">
+    <div class="col-sm-3">
+      <ac:layoutarea id="Menu">
+        <div class="well">
+          <ul class="nav nav-stacked nav-pills">
+            <li class="nav-header"><strong>$$CUSTOMERNAME$$ Account</strong></li>
+            <li>$$DASHBOARD$$</li>
+            <li>$$EDITLOGIN$$</li>
+            <li>$$CHANGEPASSWORD$$</li>
+            <li>$$PROFILE$$</li>
+            <li>$$PROFILEEDIT$$</li>
+            <ac:visibilityarea id="dvPaymentInfo">
+              <li>$$PAYMENTMETHODS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="dvAddressArea">
+              <li>$$BILLINGADDRESS$$</li>
+              <li>$$SHIPPINGADDRESS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkEditDetails">
+              <li>$$EDITDETAILS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkStatement">
+              <li>$$STATEMENT$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkorderhistory">
+              <li>$$ORDERHISTORY$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkOrderPaymentHistory">
+              <li>$$PAYMENTS$$</li>
+            </ac:visibilityarea>
+            <li>$$ORDERS$$</li>
+            <ac:visibilityarea id="lnkSubscriptions">
+              <li>$$SUBSCRIPTIONS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkReviews">
+              <li>$$REVIEWS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkSavedCarts">
+              <li>$$SAVEDCARTS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkDownloads">
+              <li>$$DOWNLOADS$$</li>
+            </ac:visibilityarea>
+            <li>$$LOGOUT$$</li>
+          </ul>
+        </div>
+      </ac:layoutarea>
+    </div>
+    <div class="col-sm-9">
+      <div class="MyAccountPage">
+        <div class="breadcrumb"><a href="/store/myaccount.aspx">My Account</a> > Edit Profile</div>
+        
+        <div class="panel panel-default">
+          <h3 class="panel-heading no-margin">Edit Information</h3>
+          <div class="panel-body">
+            <div class="pad-10 pad-b-only">
+              <label>
+                Display Name:
+                <div>$$DISPLAYNAME$$</div>
+              </label>
+            </div>
+            <div class="pad-10 pad-b-only">
+              <label>
+                Real Name:
+                <div>$$REALNAME$$</div>
+              </label>
+            </div>
+            <div class="pad-10 pad-b-only">
+              <label>
+                Company:
+                <div>$$COMPANY$$</div>
+              </label>
+            </div>
+            <div class="pad-10 pad-b-only">
+              <label>
+                Title:
+                <div>$$TITLE$$</div>
+              </label>
+            </div>
+            <div class="pad-10 pad-b-only">
+              <label>
+                Profile Image:
+                <div>
+                  <div>$$IMAGE$$</div>
+                  <div>$$DELETEIMAGE$$</div>
+                  <div>$$IMAGEAPPROVALSTATUS$$</div>
+                  <div>$$IMAGEUPLOAD$$</div>
+                  <div>$$SUPPORTEDIMAGETYPES$$</div>
+                </div>
+              </label>
+            </div>
+            <div class="pad-10 pad-b-only">
+              <label>
+                Message / Bio:
+                <div class="full-input">$$ABOUT$$</div>
+              </label>
+            </div>
+            <div class="right">$$SAVEBUTTON$$
+            </div>
+          </div>
+        </div>
+          
+          
+          <div class="panel panel-default">
+            <h3 class="panel-heading no-margin">Contact Information</h3>
+            <div class="panel-body">
+              <p>
+                The contact information listed here will display on your public profile. Do not enter anything that you do not want to be public.
+              </p>
+              <table class="MyAccountTable table" id="tblContactTypes">
+                $$CONTACTINFOLIST$$
+              </table>
+            </div>
+          </div>
+        </div>
+      <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+    </div>
+  </div>
+</ac:pagelayout>

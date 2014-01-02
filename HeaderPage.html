@@ -1,0 +1,200 @@
+<ac:pagelayout id="HeaderPage">
+  <div class="LayoutTopTop">
+    <ac:widgetarea id="TopHeaderWidgets">
+<ac:widget id="HTML2498" type="HTML">
+        <div class="pad-t-40 pad-b-20 row">
+          <div class="col-sm-6 no-m-t h1 sm-center">
+            <a class="no-ul color-inherit bold" href="/">##STORENAME##</a>
+          </div>
+          <div class="col-sm-6 no-m-b right sm-center">
+            <div><strong>##STOREPHONE##</strong></div>
+            <div><abbr title="email">E:</abbr> <a class="inherit no-ul color-inherit" href="mailto:##STOREEMAIL##">##STOREEMAIL##</a></div>
+          </div>
+        </div>
+      </ac:widget>
+<ac:widget id="MENUBAR2495" type="MenuBar" linkgroupid="1">
+        <ac:visibilityarea id="dvControl">
+          $$ADMINHELP$$
+          
+          <div class="navbar navbar-default navbar-static-top" role="navigation">
+            <div class="navbar-header visible-xs">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Menu</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <ac:layoutarea id="Item">
+                  <ac:visibilityarea id="phDDLink">
+                    <li class="dropdown">
+                      <a href="$$HREF$$" target="$$TARGET$$" data-toggle="">$$TEXT$$</a>
+                      <ac:visibilityarea id="phSubMenu">
+                        <ul class="dropdown-menu">$$SUBMENU$$</ul>
+                      </ac:visibilityarea>
+                    </li>
+                  </ac:visibilityarea>
+                  <ac:visibilityarea id="phNoDDLink">
+                    <li>
+                      <a href="$$HREF$$" target="$$TARGET$$">$$TEXT$$</a>
+                    </li>
+                  </ac:visibilityarea>
+                </ac:layoutarea>
+                
+              </ul>
+              <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                  <li><a href="#" data-toggle="dropdown">
+                    <i class="icon-search"></i>
+                    <span class="visible-xs">Search</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="panel-body no-wrap search-box">
+                          ##SEARCHBOX##
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="no-wrap">
+                    <a href="#" data-toggle="dropdown">
+                      <div class="in-block"><i class="icon-shopping-cart"></i></div>
+                      <span class="visible-xs">Shopping Cart</span>
+                      ##IF[CartIsEmpty]## ##ELSE##
+                      <span class="badge">##CARTITEMSCOUNT##</span>
+                      ##ENDIF##
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        ##IF[CartIsEmpty]##
+                        <p class="m-20">Your cart is empty!</p>
+                        ##ENDIF##
+                        $$SMALLSHOPPINGCART2496$$
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    
+                    <a href="#" data-toggle="dropdown">
+                      <i class="icon-user"></i>
+                      <span class="visible-xs">My Account</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      $$CUSTOMERLOGIN2497$$
+                      
+                    </ul>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+          </div>
+          <ac:layoutarea id="SubItem">
+            <ac:visibilityarea id="phDDLink">
+              
+              <li class="dropdown-submenu">
+                <a href="$$HREF$$" target="$$TARGET$$">$$TEXT$$</a>
+                <ac:visibilityarea id="phSubMenu">
+                  <ul class="dropdown-menu">$$SUBMENU$$</ul>
+                </ac:visibilityarea>
+              </li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="phNoDDLink">
+              <li>
+                <a href="$$HREF$$" target="$$TARGET$$">$$TEXT$$</a>
+              </li>
+            </ac:visibilityarea>
+          </ac:layoutarea>
+        </ac:visibilityarea>
+      </ac:widget>
+<ac:widget id="CUSTOMERLOGIN2497" type="CustomerLogin" enablemergecode="True">
+        <ac:visibilityarea id="LoggedOut">
+          <li>
+            <div class="panel-body no-wrap">
+              $$HEADER$$
+              <div>
+                <label>$$USERNAMELABEL$$</label>
+                <div>$$USERNAMEINPUT$$</div>
+              </div>
+              <div class="m-20 no-m-lr">
+                <label>$$PASSWORDLABEL$$</label>
+                <div>$$PASSWORDINPUT$$</div>
+                <div class="size-small right">
+                  <a href="/store/lostPassword.aspx">Forgot Password?</a>
+                </div>
+              </div>
+              <div>
+                <div class="right m-t-10">$$LOGINBUTTON$$</div>
+              </div>
+              <div class="right size-small">
+                or <a href="/store/register.aspx">Register an Account</a>
+              </div>
+              $$ERROR$$
+            </div>
+          </li>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="LoggedIn">
+          <li class="center">##GRAVATARIMAGE[email=##CUSTOMEREMAIL##,size=50,default=dd.jpg]##</li>
+          <li><a href="/store/myaccount.aspx">My Account</a></li>
+          <li><a href="/store/profile.aspx">My Profile</a></li>
+          <li><a href="/store/myaccount.aspx#Orders">Order Tracking</a></li>
+          <li><a href="/store/logout.aspx">Logout</a></li>
+        </ac:visibilityarea>
+      </ac:widget>
+<ac:widget id="SMALLSHOPPINGCART2496" type="SmallShoppingCart" enablemergecode="True">
+        <ac:visibilityarea id="dvControl">
+          <div class="panel no-m-b m-t-5 pad-b-10">
+            <div class="center well well-sm no-wrap no-m-b bold m-l-10 m-r-10">
+              <div class="pad-50 no-pad-tb">$$CARTITEMSLABEL$$</div>
+            </div>
+            <div class="media-list">
+              
+              <ac:layoutarea id="ShopCartItem">
+                <div class="SmallCartItem pad-t-15 pad-b-15 pad-l-10 pad-r-10 media">
+                  <div class="pull-left m-r-15">
+                    <img src="/resize##ITEMPHOTOURL##?bw=50&lr=t">
+                  </div>
+                  <div class="pull-right m-t-15">
+                    <a class="badge clear-item-link" href="#">&times;</a>
+                  </div>
+                  <div class="media-body">
+                    <div>$$ITEMLINK$$</div>
+                    <div>$$QUANTITYBOX$$ &nbsp;x $$PRICE$$</div>
+                  </div>
+                </div>
+                <hr class="m-l-5 m-r-5 no-m-tb">
+              </ac:layoutarea>
+              <div class="update-qty-link m-5 no-m-t pad-t-5 pad-b-5 pad-10 center">
+                <span class="rel">
+                  <span class="hide update-attention abs" style="right:100%;top:0;">
+                    click &rarr;
+                  </span>
+                  $$UPDATEQTYLINK$$
+                </span>
+                <!--<div>
+$$VIEWCARTLINK$$
+</div>
+<div>
+$$CLEARCARTLINK$$
+</div> -->
+              </div>
+              
+              <div class="well well-sm no-m-b m-l-10 m-r-10">
+                <strong class="block right">$$SUBTOTAL$$</strong>
+              </div>
+              <div class="SmallCartCheckoutButton full-input m-l-10 m-r-10">
+                $$CHECKOUTBUTTON$$
+              </div>
+              $$ERROR$$
+            </div>
+          </div>
+          <div class="pad-10 no-wrap center">
+            <a class="block pad-50 no-pad-tb" href="/store/shopcart.aspx">View Full Shopping Cart</a>
+          </div>
+        </ac:visibilityarea>
+      </ac:widget>
+</ac:widgetarea>
+  </div>
+</ac:pagelayout>

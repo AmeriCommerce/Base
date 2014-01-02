@@ -1,0 +1,133 @@
+<ac:pagelayout id="WriteReviewPage">
+  <div class="WriteReviewPage">
+    <ac:widgetarea id="Top">
+</ac:widgetarea>
+    
+    <div class="page-header"><h1>Write a Product Review For:</h1></div>
+    
+    <ac:layoutarea id="ProductInfo">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="media clear">
+            <div class="pull-left media-object">$$THUMBNAIL$$</div>
+            <div class="media-body">
+              <h2 class="media-heading h3">##ITEMNAME## (##ITEMNR##)</h2>
+              <div>##SHORTDESCRIPTION##</div>
+              <div>##AVERAGERATING## of 5</div>
+              <div><a href="##ITEMURL##">&larr; Return to product page</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ac:layoutarea>
+    
+    <ac:visibilityarea id="ExistingCustomers">
+      <div>
+        <h3>Existing Customers</h3>
+        <div>If you have an account, $$LOGINLINK$$.</div>
+      </div>
+    </ac:visibilityarea>
+    
+    $$PROFILEINACTIVE$$
+    
+    <div class="col-lg-6 col-lg-offset-3 col-sm-8 col-sm-offset-2">
+      <ac:visibilityarea id="ReviewForm">
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            How do you rate this product?
+          </div>
+          <div class="panel-body">
+            <ac:layoutarea id="RatingListItem">
+              <div class="pad-10">
+                <div class="in-block v-mid">$$DIMENSIONNAME$$</div>
+                <div class="in-block v-mid">$$DIMENSIONRATING$$</div>
+              </div>
+            </ac:layoutarea>
+            
+            <ac:visibilityarea id="SingleDimensionRating">
+              $$SINGLEDIMENSIONRATING$$
+            </ac:visibilityarea>
+          </div>
+        </div>
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Detail how you feel about this product. The title is optional, but you should at least
+            leave some comments about why you rated the product the way you did above.
+          </div>
+          <div class="panel-body">
+            <div class="pad-20 pad-b-only full-input">
+              <label>Title:</label>
+              <div>$$TITLEFIELD$$</div>
+            </div>
+            <div class="full-input">
+              <label>Review Body</label>
+              <div>
+                $$BODYFIELD$$
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <ac:visibilityarea id="ProsCons">
+          
+          <div class="panel panel-default">
+            <div class="panel-heading">Pick some keywords or adjectives that describe what you liked and/or disliked about the product
+              in particular, i.e. "price" or "quality."
+            </div>
+            <div class="panel-body">
+              <div class="pad-20 pad-b-only">Pros:
+                $$PROS$$
+              </div>
+              <div>
+                Cons:
+                $$CONS$$
+              </div>
+            </div>
+          </div>
+        </ac:visibilityarea>
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            Your Information - Your email address will not be shown, but the rest of this information will be visible by anyone who can see the review.
+          </div>
+          <div class="panel-body">
+            <div class="pad-20 pad-b-only">
+              <label>$$DISPLAYNAMELABEL$$</label>
+              <div>$$DISPLAYNAMEFIELD$$</div>
+            </div>
+            <div class="pad-20 pad-b-only">
+              <label>Email</label>
+              <div>$$EMAILFIELD$$</div>
+              <small class="text-muted">To change your email address, please use the My Account page.</small>
+            </div>
+            <div class="pad-20 pad-b-only">
+              <label>Website:</label>
+              <div>$$WEBSITEFIELD$$</div>
+            </div>
+            <div class="pad-20 pad-b-only">
+              <label>Location:</label>
+              <div>$$LOCATIONFIELD$$</div>
+            </div>
+            <div>$$MAKEDEFAULTCHECKBOX$$</div>
+          </div>
+        </div>
+        
+        
+        <div class="right">
+          $$CONTINUEBUTTON$$
+        </div>
+        
+      </ac:visibilityarea>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+    </div>
+  </div>
+</ac:pagelayout>

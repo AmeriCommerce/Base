@@ -1,0 +1,200 @@
+<ac:pagelayout id="ShippingAddressPage">
+  
+  <ac:widgetarea id="Top">
+</ac:widgetarea>  
+  <div class="row">
+    <div class="col-sm-3">
+      <ac:layoutarea id="Menu">
+        <div class="well">
+          <ul class="nav nav-stacked nav-pills">
+            <li class="nav-header"><strong>$$CUSTOMERNAME$$ Account</strong></li>
+            <li>$$DASHBOARD$$</li>
+            <li>$$EDITLOGIN$$</li>
+            <li>$$CHANGEPASSWORD$$</li>
+            <li>$$PROFILE$$</li>
+            <li>$$PROFILEEDIT$$</li>
+            <ac:visibilityarea id="dvPaymentInfo">
+              <li>$$PAYMENTMETHODS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="dvAddressArea">
+              <li>$$BILLINGADDRESS$$</li>
+              <li>$$SHIPPINGADDRESS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkEditDetails">
+              <li>$$EDITDETAILS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkStatement">
+              <li>$$STATEMENT$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkorderhistory">
+              <li>$$ORDERHISTORY$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkOrderPaymentHistory">
+              <li>$$PAYMENTS$$</li>
+            </ac:visibilityarea>
+            <li>$$ORDERS$$</li>
+            <ac:visibilityarea id="lnkSubscriptions">
+              <li>$$SUBSCRIPTIONS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkReviews">
+              <li>$$REVIEWS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkSavedCarts">
+              <li>$$SAVEDCARTS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkDownloads">
+              <li>$$DOWNLOADS$$</li>
+            </ac:visibilityarea>
+            <li>$$LOGOUT$$</li>
+          </ul>
+        </div>
+      </ac:layoutarea>
+    </div>
+    <div class="col-sm-9">
+      <div class="MyAccountPage">
+        <div class="breadcrumb"><a href="/store/myaccount.aspx">My Account</a> > Shipping Address</div> 
+        
+        <ac:visibilityarea id="Addresses">
+          <div class="panel panel-default">
+            <div class="panel-heading">Address Book</div>
+            <div class="panel-body no-padding">
+              <div class="overflow-x-scroll pad-20">
+                <ac:layoutarea id="Address">
+                  <div class="address pad-30 pad-r-only">
+                    <div class="no-wrap">$$ADDRESS$$</div>
+                    <div class="m-10 m-b-only">
+                      $$USEBUTTON$$
+                      <div class="m-t-5">
+                      $$EDITBUTTON$$
+                      $$DELETEBUTTON$$
+                      </div>
+                    </div>
+                  </div>
+                </ac:layoutarea>
+              </div>
+            </div>
+          </div>
+        </ac:visibilityarea>
+        
+        <ac:layoutarea id="AddressEdit">
+          <div class="panel panel-default">
+            <div class="panel-heading">$$HEADING$$</div>
+            <div class="panel-body">
+              <div class="pad-10 pad-b-only">
+                <label>
+                  First Name
+                  <div>$$FIRSTNAME$$</div>
+                  $$FIRSTNAMEERROR$$
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Last Name
+                  <div>$$LASTNAME$$</div>
+                  $$LASTNAMEERROR$$
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Company
+                  <div>$$COMPANY$$</div>
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Address Line 1
+                  <div>$$ADDRESSLINE1$$</div>
+                  $$ADDRESSLINE1ERROR$$
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Address Line 2
+                  <div>$$ADDRESSLINE2$$</div>
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  City
+                  <div>$$CITY$$</div>
+                  $$CITYERROR$$
+                </label>
+              </div>
+              <div id="StateDiv" class="pad-10 pad-b-only">
+                <label>
+                  State
+                  <div>$$STATE$$</div>
+                  $$STATEERROR$$
+                </label>
+              </div>
+              <div id="NonUSStateDiv" class="pad-10 pad-b-only">
+                <label>
+                  State
+                  <div>$$NONUSSTATE$$</div>
+                  $$NONUSSTATEERROR$$
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Zip/Postal Code
+                  <div>$$ZIPPOSTALCODE$$</div>
+                  $$ZIPPOSTALCODEERROR$$
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Country
+                  <div>$$COUNTRY$$</div>
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Phone Number
+                  <div>$$PHONENUMBER$$</div>
+                  $$PHONENUMBERERROR$$
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Alt Phone Number
+                  <div>$$ALTPHONENUMBER$$</div>
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Fax Number
+                  <div>$$FAXNUMBER$$</div>
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Address Notes
+                  <div>$$ADDRESSNOTES$$</div>
+                </label>
+              </div>
+              $$BUTTON$$
+            </div>
+          </div>
+          
+          <script>
+            function showCityDiv() {
+              if ($("[id*=ddCountryID]").val() != 1 && $("[id*=ddCountryID]").val() != 37) {
+                $("[id*=ddStateID]").val(0);
+                $("#StateDiv").hide();
+                $("#NonUSStateDiv").show();
+              }
+              else {
+                $("#StateDiv").show();
+                $("#NonUSStateDiv").hide();
+              }
+            }
+            showCityDiv();
+          </script>
+        </ac:layoutarea>
+        
+      </div>
+      <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+    </div>
+  </div>
+</ac:pagelayout>

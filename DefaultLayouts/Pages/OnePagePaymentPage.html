@@ -1,0 +1,62 @@
+<ac:pagelayout id="OnePagePaymentPage">
+  
+  <div align="center">$$ERRORTEXT$$</div>
+  <p>
+    $$TITLE$$
+    <ac:widgetarea id="Top">
+</ac:widgetarea>
+  </p>
+  <table width="100%">
+    $$EXISTINGCUSTOMERS$$
+    <tr>
+      <td valign="top" width="50%" colspan="2">
+        <div class="CheckOutSubHeader"><br>
+          &nbsp;</div>
+        <div class="CheckOutSubHeader">Billing Information</div>
+        $$ADDRESSEDITOR$$</td>
+    </tr>
+    $$REGISTRATION$$
+    <tr>
+      <td valign="top" runat="server" id="tdCustomOrderFields">
+        <div class="CheckOutSubHeader">
+          Other Order Information
+        </div>
+        $$CUSTOMFIELDS$$   
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="CheckOutSubHeader">Payment Information</div>
+        <div>
+          $$INVOICEREFNRTEXT$$
+          $$INVOICENRTEXTBOX$$
+        </div>
+        <div>
+          <span class="CheckOutText">Payment Amount:</span>
+          $
+          $$AMOUNTTEXTBOX$$
+        </div>
+        <div>
+          <span class="CheckOutText">Payment Method:</span>
+          $$PAYMENTMETHODS$$
+        </div>
+        $$CREDITCARD$$
+        $$ECHECK$$
+        $$CUSTOMPAYMENTMETHODS$$
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class="CheckOutSubHeader">&nbsp;</div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        $$CONTINUEBUTTON$$
+      </td>
+    </tr>
+  </table>
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  
+</ac:pagelayout>

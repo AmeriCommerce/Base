@@ -1,0 +1,44 @@
+<ac:pagelayout id="RightColumnPage">
+  <div class="well">
+  <ac:widgetarea id="Top">
+<ac:widget id="BLOGDRILLDOWN2516" type="BlogDrillDown">
+  
+  <ac:visibilityarea id="dvControl">
+    <ul class="nav nav-list">
+      <li>
+    <strong>$$HEADER$$</strong>
+      </li>
+      <ac:layoutarea id="Item">
+        <li>
+          <ac:visibilityarea id="Blog">
+            <a href="$$HREF$$" class="$$LINKCLASS$$"> <img src="$$ICONSRC$$" alt=""> $$TEXT$$</a>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="BlogCategory">
+            <a href="$$HREF$$" class="$$LINKCLASS$$"> <img src="$$ICONSRC$$" alt=""> $$TEXT$$</a>
+          </ac:visibilityarea>
+        </li>
+      </ac:layoutarea>
+    </ul>
+  </ac:visibilityarea>
+  
+</ac:widget>
+<ac:widget id="BLOGTAGCLOUD2515" type="BlogTagCloud">
+  
+  <ac:visibilityarea id="dvControl">
+    <strong>$$HEADER$$</strong>
+    <div class="panel-body">
+      <ul class="$$CLASSNAME$$">
+        <ac:layoutarea id="Tag">
+          <li class="$$CLASSNAME$$">
+            <a href="$$TAGHREF$$" class="$$TAGCLASS" style="$$TAGFONTSIZE$$">$$TAGNAME$$</a>
+          </li>
+        </ac:layoutarea>
+      </ul>
+    </div>
+  </ac:visibilityarea>
+  
+</ac:widget>
+</ac:widgetarea><ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  </div>
+  </ac:pagelayout>

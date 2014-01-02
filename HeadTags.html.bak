@@ -1,0 +1,29 @@
+<!-- helps makes site responsive on phones/tablets. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- test -->
+<!-- Reference the theme's stylesheet after bootstrap to allow overriding -->
+<link rel="stylesheet" type="text/css" href="##THEMEDIR##css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="##THEMEDIR##css/style.css">
+
+<!-- include DeputyCSS library for all kinds of useful helper css -->
+<link rel="stylesheet" type="text/css" href="##THEMEDIR##css/deputy.css">
+
+<!-- Font Awesome-->
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
+<!--Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="##THEMEDIR##js/respond.min.js"></script>
+<![endif]-->
+
+<!-- contains some init type stuff used by the theme later on -->
+<script src="##THEMEDIR##js/themepre.js"></script>
+
+##INCLUDESCRIPTBOTTOM[//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js]##
+##INCLUDESCRIPTBOTTOM[/store/inc/jquery.ui.js]##
+##INCLUDESCRIPTBOTTOM[##THEMEDIR##js/hogan-2.0.0.js]##
+##INCLUDESCRIPTBOTTOM[##THEMEDIR##js/typeahead-min.js]##
+##INCLUDESCRIPTBOTTOM[/store/inc/clientapi/ac-client-api.js]##
+##INCLUDESCRIPTBOTTOM[##THEMEDIR##js/theme.js]##
+##INCLUDESCRIPTBOTTOM[##THEMEDIR##js/QtySpinner.js]##

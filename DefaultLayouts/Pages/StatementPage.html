@@ -1,0 +1,85 @@
+<ac:pagelayout id="StatementPage">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  
+  $$MYACCOUNTMENU$$
+  
+  <div class="MyAccountPage">
+    <div style="float:left;width:100%;">
+      <h1>My Account Statement</h1>
+      <div class="MyAccountSection">
+        <h3 class="MyAccountSectionHeader">Statement</h3>
+        <div class="MyAccountSectionInner">
+          $$NORECORDS$$
+          <table class="StatementTable MyAccountTable" width="100%" border="0" cellpadding="3" cellspacing="0">
+            <ac:layoutarea id="ItemHeader">
+              <tr class="StatementHeader">
+                <th class="StatmentHeader" align="left">
+                  $$ORDERNUMBERHEADER$$
+                </th>
+                <th class="StatementHeader" align="left">
+                  $$ORDERDATEHEADER$$
+                </th>
+                <th class="StatementHeader" align="center">
+                  $$ORDERTOTALHEADER$$
+                </th>
+                <th class="StatementHeader" align="center">
+                  $$ORDERBALANCEHEADER$$
+                </th>
+                <th class="StatementHeader" align="center">
+                  $$ORDERPAYMENTHEADER$$
+                </th>
+              </tr>
+            </ac:layoutarea>
+            <ac:layoutarea id="ItemDetail">
+              <tr class="StatementItem">
+                <td>
+                  <div class="StatementOrderID">$$ORDERNUMBER$$</div>
+                </td>
+                <td>
+                  <span class="StatementOrderDate">$$ORDERDATE$$</span>
+                </td>
+                <td align="right">
+                  <div class="StatementOrderTotal">$$ORDERTOTAL$$</div></td>
+                <td align="right">
+                  <div class="StatementOrderBalance">$$ORDERBALANCE$$</div>
+                </td>
+                <td align="left">$$PAYMENTINPUT$$ $$PAYINFULL$$</td>
+              </tr>
+            </ac:layoutarea>
+            <ac:layoutarea id="ItemDetailAlt">
+              <tr class="StatementItem">
+                <td>
+                  <div class="StatementOrderID">$$ORDERNUMBER$$</div>
+                </td>
+                <td>
+                  <span class="StatementOrderDate">$$ORDERDATE$$</span>
+                </td>
+                <td align="right">
+                  <div class="StatementOrderTotal">$$ORDERTOTAL$$</div></td>
+                <td align="right">
+                  <div class="StatementOrderBalance">$$ORDERBALANCE$$</div>
+                </td>
+                <td align="left">$$PAYMENTINPUT$$ $$PAYINFULL$$</td>
+              </tr>
+            </ac:layoutarea>
+            <ac:layoutarea id="ItemFooter">
+              <tr class="StatementFooter">
+                <td> &nbsp;</td>
+                <td>Totals</td>
+                <td align="right"><span class="StatementOrderTotal">$$GRANDTOTAL$$</span></td>
+                <td align="right"><span class="StatementOrderBalance">$$BALANCETOTAL$$</span></td>
+                <td align="left">$$TOTALPAYMENT$$</td>
+              </tr>
+            </ac:layoutarea>
+          </table>
+          <input type="button" class="ThemeButton" id="btnClearPaymentTotals" value="Clear Totals"> 
+          <input type="button" class="ThemeButton" id="btnMarkAll" value="Mark All"> 
+          <input type="button" class="ThemeButton" id="btnMakePayment" value="Make Payment">
+        </div>
+      </div>
+    </div>
+  </div>
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>

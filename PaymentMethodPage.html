@@ -1,0 +1,196 @@
+<ac:pagelayout id="PaymentMethodPage">
+  
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  <div class="row">
+    <div class="col-sm-3">
+      <ac:layoutarea id="Menu">
+        <div class="well">
+          <ul class="nav nav-stacked nav-pills">
+            <li class="nav-header"><strong>$$CUSTOMERNAME$$ Account</strong></li>
+            <li>$$DASHBOARD$$</li>
+            <li>$$EDITLOGIN$$</li>
+            <li>$$CHANGEPASSWORD$$</li>
+            <li>$$PROFILE$$</li>
+            <li>$$PROFILEEDIT$$</li>
+            <ac:visibilityarea id="dvPaymentInfo">
+              <li>$$PAYMENTMETHODS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="dvAddressArea">
+              <li>$$BILLINGADDRESS$$</li>
+              <li>$$SHIPPINGADDRESS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkEditDetails">
+              <li>$$EDITDETAILS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkStatement">
+              <li>$$STATEMENT$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkorderhistory">
+              <li>$$ORDERHISTORY$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkOrderPaymentHistory">
+              <li>$$PAYMENTS$$</li>
+            </ac:visibilityarea>
+            <li>$$ORDERS$$</li>
+            <ac:visibilityarea id="lnkSubscriptions">
+              <li>$$SUBSCRIPTIONS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkReviews">
+              <li>$$REVIEWS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkSavedCarts">
+              <li>$$SAVEDCARTS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkDownloads">
+              <li>$$DOWNLOADS$$</li>
+            </ac:visibilityarea>
+            <li>$$LOGOUT$$</li>
+          </ul>
+        </div>
+      </ac:layoutarea>
+    </div>
+    <div class="col-sm-9">
+      <div class="MyAccountPage">
+        <div class="breadcrumb"><a href="/store/myaccount.aspx">My Account</a> > Saved Payment Methods</div>
+        
+        <p>Please select your method of payment and complete all requested information.</p>
+        
+        $$PAYMENTMETHODS$$
+        
+        <ac:visibilityarea id="CreditCards">
+          <ac:layoutarea id="CreditCards">
+            <div class="panel panel-default">
+              <div class="panel-heading"><h4 class="no-margin no-padding">Credit Cards</h4></div>
+              <div class="panel-body">
+                <div class="overflow-x-scroll">
+                  <table class="table">
+                    <thead>
+                      <tr class="no-wrap">
+                        <th>Card Type</th>
+                        <th>Card Number</th>
+                        <th>Expiration</th>
+                        <th>Card Holder</th>
+                        <th class="right">Actions</th>
+                      </tr>
+                    </thead>
+                    $$CARDS$$
+                  </table>
+                </div>
+                <div class="overflow-x-scroll">
+                  <h5>Enter a New Credit Card</h5>
+                  <table class="table">
+                    <thead>
+                      <tr class="no-wrap">
+                        <th>Card Type</th>
+                        <th>Card Number</th>
+                        <th>Expiration</th>
+                        <th>Card Holder</th>
+                        <th class="right">Actions</th>
+                      </tr>
+                    </thead>
+                    <tr class="no-wrap">
+                      <td>$$CARDTYPE$$</td>
+                      <td>$$CARDNUMBER$$</td>
+                      <td>
+                        $$EXPMONTH$$ 
+                        $$EXPYEAR$$ 
+                        $$EXPIREDMSG$$ 
+                      </td>
+                      <td>
+                        $$CARDHOLDERNAME$$ 
+                      </td>
+                      <td class="right">
+                        $$SELECTBUTTON$$
+                      </td>
+                    </tr>
+                  </table>
+                  $$CARDERROR$$
+                </div>
+              </div>
+            </div>
+            
+          </ac:layoutarea>
+          
+          <!-- this is the repeated item for the "CARDS" merge code in the table above -->
+          <ac:layoutarea id="Card">
+            <tr class="no-wrap">
+              <td>$$CARDTYPE$$</td>
+              <td>$$CARDNUMBER$$</td>
+              <td>
+                $$EXPMONTH$$ 
+                $$EXPYEAR$$ 
+                $$EXPIREDMSG$$ 
+              </td>
+              <td>
+                $$CARDHOLDERNAME$$ 
+              </td>
+              <td class="right">
+                
+                $$DELETEBUTTON$$ 
+                $$SELECTBUTTON$$
+              </td>
+            </tr>
+          </ac:layoutarea>
+        </ac:visibilityarea>
+        
+        <ac:visibilityarea id="CustomPaymentMethods">
+          <ac:layoutarea id="CustomMethods">
+            
+            $$CUSTOMMETHODS$$
+          </ac:layoutarea>
+          <ac:layoutarea id="CustomMethod">
+            <div class="panel panel-default">
+              <div class="panel-heading">$$METHODNAME$$</div>
+              <div class="panel-body">
+                <p>$$METHODDESCRIPTION$$</p>
+                $$FIELDS$$
+                $$SELECTBUTTON$$
+              </div>
+            </div>
+          </ac:layoutarea>
+          <ac:layoutarea id="CustomMethodField">
+            <div class="pad-10 pad-b-only">
+              <label>
+                $$FIELDNAME$$
+                <div>$$FIELD$$</div>
+              </label>
+            </div>
+          </ac:layoutarea>
+        </ac:visibilityarea>
+        
+        <ac:layoutarea id="PayPal">
+          <div class="panel panel-default">
+            <div class="panel-heading">PayPal</div>
+            <div class="panel-body">
+              Use Paypal $$BUTTON$$
+            </div>
+          </div>
+        </ac:layoutarea>
+        <ac:layoutarea id="ECheck">
+          <div class="panel panel-default">
+            <div class="panel-heading">ECheck</div>
+            <div class="panel-body">
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Account Number
+                  <div>$$ACCOUNTNUMBER$$</div>
+                </label>
+              </div>
+              <div class="pad-10 pad-b-only">
+                <label>
+                  Routing Number
+                  <div>$$ROUTINGNUMBER$$</div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </ac:layoutarea>
+        
+      </div>
+    </div>
+    <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  </div>
+  
+</ac:pagelayout>

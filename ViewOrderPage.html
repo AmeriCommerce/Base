@@ -1,0 +1,251 @@
+<ac:pagelayout id="ViewOrderPage">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  <div>
+    <div class="page-header">
+      <h1>$$ORDERHEADER$$ <small>$$ORDERNUMBER$$</small></h1>
+    </div>
+    <ac:visibilityarea id="litPayPalInstructions">
+      <p class="lead">
+        $$PAYPALINSTRUCTIONS$$
+      </p>
+    </ac:visibilityarea>
+    <div class="well">
+      <div>
+        $$PLACEORDERSUBHEADER$$
+        $$ORDERSUBHEADER$$
+      </div>
+      <div class="CheckOutSubHeader">Order #
+        $$ORDERNUMBER$$
+        Placed
+        $$ORDERDATE$$
+        <br>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        $$ORDERSTATUSHEADER$$
+      </div>
+      <div class="panel-body">
+        
+        <strong class="size-big block">$$ORDERSTATUS$$</strong>
+        $$PAYMENTREJECTIONREASON$$
+        $$PAYMENTSTATUS$$<br>
+        $$PAYMENTDIRECTIONS$$
+        $$RECEIPTLINK$$
+      </div>
+    </div>
+    <ac:visibilityarea id="EProductsContainer">
+      <div class="CheckOutEProducts EProductsContainer attentionText">
+        <strong>The URLs for your online purchases are:</strong>
+        <br>
+        $$EPRODUCTDISPLAY$$
+        <br>
+        <b>You will also receive an email with these urls.</b>
+      </div>
+    </ac:visibilityarea>
+    $$CONFIRMATIONMESSAGE$$
+    
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            $$ORDERPAYMENTINFORMATION$$
+          </div>
+          <div class="panel-body">
+            
+            <p>$$PAYMENTMETHOD$$</p>
+            <p>$$TRANSACTIONID$$</p>
+            <p>$$BILLINGADDRESS$$</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6 no-m-b">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            $$SHIPPINGADDRESSHEADER$$
+          </div>
+          <div class="panel-body">
+            
+            $$SHIPPINGADDRESS$$
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <ac:visibilityarea id="CustomFieldContainer">
+        
+        <div class="col-sm-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              Additional Order Information
+            </div>
+            <div class="panel-body">
+              
+              $$CUSTOMFIELDS$$
+              
+            </div>
+          </div>
+        </div>
+      </ac:visibilityarea>
+      <div class="col-sm-6 no-m-b">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            $$SHIPPINGDETAILSHEADER$$
+          </div>
+          <div class="panel-body">
+            
+            <p>$$ORDERSHIPPINGMETHOD$$</p>
+            
+            <p>$$ORDERTRACKINGLINK$$</p>
+            <p>$$ORDERSHIPPINGNOTICE$$</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- commenting this out for now. 
+    <ac:visibilityarea id="litSpecialInstructions">
+      <div class="attentionText">$$SPECIALINSTRUCTIONS$$</div>
+    </ac:visibilityarea>
+-->
+    <ac:visibilityarea id="PublicCommentsContainer">
+      <div class="ViewOrderText">
+        <span class="CheckOutSubHeader">$$PUBLICCOMMENTSHEADER$$</span><br>
+        $$PUBLICCOMMENTS$$
+      </div>
+    </ac:visibilityarea>
+    <ac:visibilityarea id="OrderInstructionsContainer">
+      <div class="ViewOrderText">
+        
+        <span class="CheckOutSubHeader">$$ORDERINSTRUCTIONSHEADER$$</span><br>
+        $$ORDERINSTRUCTIONS$$
+      </div>
+      <br>
+    </ac:visibilityarea>
+    <div class="panel panel-default">
+      <div class="panel-heading">Order Details</div>
+      <div class="panel-body">
+        <table class="ViewOrderTable table">
+          <thead>
+            <tr class="ViewOrderHeader">
+              <th class="ViewOrderHeader" align="left">
+                $$ITEMNUMBERHEADER$$
+              </th>
+              <th class="ViewOrderHeader" align="left">
+                $$ITEMNAMEHEADER$$
+              </th>
+              <th class="ViewOrderHeader" align="center">
+                $$ITEMQTYHEADER$$
+              </th>
+              <th class="ViewOrderHeader" align="center">
+                $$ITEMQTYSHIPPEDHEADER$$
+              </th>
+              <th class="ViewOrderHeader" align="center">
+                $$ITEMPRICEHEADER$$
+              </th>
+              <th class="ViewOrderHeader" align="center">
+                $$ITEMTOTALHEADER$$
+              </th>
+            </tr>
+          </thead>
+          <ac:layoutarea id="ItemDetail">
+            <tr class="ViewOrderItem">
+              <td><div class="OrderDetailsItemNr">$$ITEMNUMBER$$</div></td>
+              <td><span class="OrderDetailsItemName">$$ITEMNAME$$</span>
+                $$EPRODUCTLINK$$
+                $$VARIATIONINFO$$
+                $$CUSTOMIZATIONINFO$$
+                $$ITEMADDRESS$$
+                $$ITEMSHIPPINGMETHOD$$
+                $$ITEMGIFTMESSAGE$$
+                $$ITEMDELIVERYDATE$$
+              </td>
+              <td align="center"><div class="OrderDetailsItemQuantity">$$ITEMQTY$$</div></td>
+              <td align="center">$$ITEMQTYSHIPPED$$</td>
+              <td align="center"><div class="OrderDetailsItemPrice">$$ITEMPRICE$$</div></td>
+              <td align="center">$$ITEMTOTAL$$</td>
+            </tr>
+          </ac:layoutarea>
+          <ac:layoutarea id="ItemDetailAlt">
+            <tr class="ViewOrderItemAlt">
+              <td><div class="OrderDetailsItemNr">$$ITEMNUMBER$$</div></td>
+              <td><span class="OrderDetailsItemName">$$ITEMNAME$$</span>
+                $$EPRODUCTLINK$$
+                $$VARIATIONINFO$$
+                $$CUSTOMIZATIONINFO$$
+                $$ITEMADDRESS$$
+                $$ITEMSHIPPINGMETHOD$$
+                $$ITEMGIFTMESSAGE$$
+                $$ITEMDELIVERYDATE$$
+              </td>
+              <td align="center"><div class="OrderDetailsItemQuantity">$$ITEMQTY$$</div></td>
+              <td align="center">$$ITEMQTYSHIPPED$$</td>
+              <td align="center"><div class="OrderDetailsItemPrice">$$ITEMPRICE$$</div></td>
+              <td align="center">$$ITEMTOTAL$$</td>
+            </tr>
+          </ac:layoutarea>
+          <tr>
+            <td colspan="5" align="right" class="ViewOrderPricingText no-border">
+              $$ORDERSUBTOTALHEADER$$
+            </td>
+            <td class="ViewOrderPricing center no-border">$$ORDERSUBTOTAL$$</td>
+          </tr>
+          <ac:visibilityarea id="ShippingRow">
+            <tr>
+              <td colspan="5" align="right" class="ViewOrderPricingText no-border">$$ORDERSHIPPINGHEADER$$</td>
+              <td class="ViewOrderPricing center no-border">$$ORDERSHIPPINGAMT$$</td>
+            </tr>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="HandlingRow">
+            <tr>
+              <td colspan="5" align="right" class="ViewOrderPricingText no-border">
+                $$ORDERHANDLINGHEADER$$
+              </td>
+              <td class="ViewOrderPricing center no-border">$$ORDERHANDLINGAMT$$</td>
+            </tr>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="DiscountRow">
+            <tr>
+              <td colspan="5" align="right" class="ViewOrderPricingText no-border">
+                $$ORDERDISCOUNTHEADER$$
+                $$ORDERDISCOUNTDESC$$</td>
+              <td class="ViewOrderPricing center no-border">$$ORDERDISCOUNTAMT$$</td>
+            </tr>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="TaxRow">
+            <tr>
+              <td colspan="5" align="right" class="ViewOrderPricingText no-border">
+                $$ORDERTAXHEADER$$
+              </td>
+              <td class="ViewOrderPricing center no-border">$$ORDERTAXAMT$$</td>
+            </tr>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="AdditionalFeeRow">
+            <tr>
+              <td colspan="5" align="right" class="ViewOrderPricingText no-border">$$ORDERADDITIONALFEEDESC$$</td>
+              <td class="ViewOrderPricing center no-border">$$ORDERADDITIONALFEEAMT$$</td>
+            </tr>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="TotalRow">
+            <tr class="OrderPricing">
+              <td colspan="5" align="right" class="ViewOrderPricingText no-border">
+                $$ORDERTOTALHEADER$$
+              </td>
+              <td class="ViewOrderPricing center no-border">$$ORDERTOTAL$$</td>
+            </tr>
+          </ac:visibilityarea> 
+        </table>
+      </div>
+    </div>
+    <ac:visibilityarea id="OrderGiftMessageContainer">
+      <div class="ViewOrderText">
+        <span class="CheckOutSubHeader">
+          $$GIFTMESSAGEHEADER$$</span><br>
+        $$GIFTMESSAGE$$
+      </div>
+    </ac:visibilityarea>
+  </div>
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>

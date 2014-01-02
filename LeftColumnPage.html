@@ -1,0 +1,63 @@
+<ac:pagelayout id="LeftColumnPage">
+  <div class="well">
+    <ac:widgetarea id="Top">
+<ac:widget id="ATTRIBUTENAVIGATIONLINKS2511" type="AttributeNavigationLinks">
+        <ac:visibilityarea id="dvControl">
+          <ul class="nav nav-stacked nav-pills">
+            <li><strong>$$HEADER$$</strong></li>
+            
+            <ac:layoutarea id="Item">
+              <ac:visibilityarea id="phHeader">
+                <li>$$GROUPHEADER$$</li>
+              </ac:visibilityarea>
+              
+              <li>
+                <ac:visibilityarea id="ckAtt">
+                  <label class="checkbox" for="$$CHECKBOXID$$">
+                    $$CHECKBOX$$ $$ATTRIBUTENAME$$
+                  </label>
+                </ac:visibilityarea>
+                <ac:visibilityarea id="hplAttribute">
+                  <a class="attribute-link" href="$$ATTRIBUTEHREF$$">$$ATTRIBUTENAME$$<span class="badge pull-right">$$COUNT$$</span></a>
+                </ac:visibilityarea>
+              </li>
+              
+              <ac:visibilityarea id="phFooter">
+                <li>$$FILTERBUTTON$$</li>
+              </ac:visibilityarea>
+            </ac:layoutarea>
+          </ul>
+        </ac:visibilityarea>
+      </ac:widget>
+<ac:widget id="CATEGORYNAVIGATIONLINKS2510" type="CategoryNavigationLinks" rootcategorybehavior="-999">
+        <ac:visibilityarea id="dvControl">
+          
+          <ul class="nav nav-stacked nav-pills">
+            <li><strong>$$HEADER$$</strong></li>
+            <ac:layoutarea id="Item">
+              <li><a class="category-link" href="$$CATEGORYHREF$$">
+                <!--$$CATEGORYICON$$-->
+                $$CATEGORYNAME$$
+                </a>
+              </li>
+            </ac:layoutarea>
+          </ul>
+        </ac:visibilityarea>
+      </ac:widget>
+<ac:widget id="MANUFACTURERNAVIGATIONLINKS2512" type="ManufacturerNavigationLinks">
+        <ac:visibilityarea id="dvControl">
+          <ul class="nav nav-stacked nav-pills">
+            <li><strong>$$HEADER$$</strong></li>
+            <ac:layoutarea id="Item">
+              <li>
+                <a href="$$MFGHREF$$" class="$$CLASS$$ category-link">$$MFGNAME$$</a>
+              </li>
+            </ac:layoutarea>
+          </ul>
+        </ac:visibilityarea>
+      </ac:widget>
+</ac:widgetarea>
+    <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  </div>
+</ac:pagelayout>

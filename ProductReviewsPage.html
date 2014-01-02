@@ -1,0 +1,123 @@
+<ac:pagelayout id="ProductReviewsPage">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  <div itemscope="" itemtype="http://data-vocabulary.org/Product">
+    <ac:layoutarea id="ProductInfo">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="media clear">
+            
+            <meta itemprop="category" content="##CATNAME##">
+            <meta itemprop="identifier" content="##GTIN##">
+            <meta itemprop="productID" content="##GTIN##">
+            <div class="pull-left media-object" itemprop="image" content="http://##DOMAINNAME####ITEMPHOTOURL##">$$THUMBNAIL$$</div>
+            <div class="media-body">
+              <h2 class="media-heading h3"><span itemprop="name">##ITEMNAME##</span> <span itemprop="sku">(##ITEMNR##)</span></h2>
+              <div><span itemprop="review" itemscope="" itemtype="http://data-vocabulary.org/Review-aggregate">
+                <span itemprop="rating">##AVERAGERATING##</span> stars, based on <span itemprop="count">##REVIEWCOUNT##
+                </span> reviews</span></div>
+              <div itemprop="description">
+                ##TRIM[250]## ##LONGDESCRIPTION1## ##ENDTRIM##
+              </div>
+              
+              <div id="dvProductPricing" itemprop="offerDetails" itemscope="" itemtype="http://data-vocabulary.org/Offer">
+                
+                <meta itemprop="currency" content="USD">
+                <meta itemprop="seller" content="##STORENAME##">
+                <meta itemprop="price" content="##PRICE##">
+              </div>
+              <div><a href="##ITEMURL##">&larr; Return to product page</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ac:layoutarea>
+    
+    <ac:visibilityarea id="TopNavigationArea">
+      <div id="zzz">
+        <div class="CategoryPageNavigation">
+          <span class="CategoryPageNumberPerPage in-block">$$NUMBERPERPAGEDROPDOWNLABEL$$</span>
+          $$SHOWBYPAGESIZE$$
+          
+          <div class="in-block">$$SORTBYDROPDOWN$$</div>
+          <div style="clear:both"></div>       
+        </div>        
+      </div>
+      <div id="dvNavTop">
+        <div class="CategoryPageNavigation">
+          <div style="float:right;">$$REVIEWLISTPAGENAVIGATION$$</div>
+          $$REVIEWCOUNTTOP$$
+          <div style="clear:both"></div>
+        </div>      
+      </div>    
+    </ac:visibilityarea>
+    
+    
+    <div class="media-list pad-20 no-pad-lr">
+      <ac:layoutarea id="Item">
+        <div class="media" itemprop="review" itemscope="" itemtype="http://schema.org/Review">
+          <div class="pull-left hidden-xs">
+            <i class="glyphicon glyphicon-user media-object text-muted" style="font-size:100px;"></i>
+          </div>
+          <div class="media-body">
+            <div class="row">
+              <div class="col-sm-2">
+                <div class="ProductReviewItemMeta">
+                  <span itemprop="author">$$AUTHORNAME$$</span>
+                  <div class="text-muted">$$AUTHORLOCATION$$</div>
+                </div>
+              </div>
+              <div class="col-sm-10">
+                <div class="pad-20 pad-b-only clearfix">
+                  <h4 class="media-heading pull-left">
+                    <span class="in-block" itemprop="name">$$TITLE$$</span>
+                  </h4>
+                  <div itemprop="datePublished" class="pull-right text-muted">
+                    $$REVIEWDATE$$
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    $$RATINGLIST$$
+                    
+                    <ac:visibilityarea id="Pros">
+                      <div class="ReviewItemProsArea">
+                        <div class="ReviewItemProsHeader">Pros:</div>
+                        <div class="ReviewItemPros">$$PROSLIST$$</div>
+                      </div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="Cons">
+                      <div class="ReviewItemConsArea">
+                        <div class="ReviewItemConsHeader">Cons:</div>
+                        <div class="ReviewItemCons">$$CONSLIST$$</div>
+                      </div>
+                    </ac:visibilityarea>
+                  </div>
+                  <div class="col-sm-8">
+                    
+                    <blockquote itemprop="description">
+                      $$BODY$$
+                    </blockquote>
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+      </ac:layoutarea>
+    </div>
+    <ac:visibilityarea id="BottomNavigationArea">
+      <div id="dvNavBottom">
+        <div class="CategoryPageNavigation">
+          <div style="float:right;">$$REVIEWLISTPAGENAVIGATIONBOTTOM$$</div>
+          $$REVIEWCOUNTBOTTOM$$
+          <div style="clear:both"></div>
+        </div>
+      </div>
+    </ac:visibilityarea>
+    <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  </div>
+</ac:pagelayout>

@@ -1,0 +1,40 @@
+<ac:pagelayout id="CustomerLoginPage">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  $$CHECKOUTPROGRESS$$
+  <br>
+  <div class="page-header no-m-t"><h1 class="no-m-t">$$PAGEHEADER$$</h1></div>
+  $$ERRORTEXT$$
+  <div class="row">
+    <div class=" col-sm-6 col-sm-offset-3 col-xs-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="no-padding no-margin h6">$$LOGINHEADER$$</h2>
+        </div>
+        <div class="panel-body">
+          <div class="form-signin">
+            <h4>$$EXISTINGCUSTOMERHEADER$$</h4>
+            <p>$$EXISTINGCUSTOMERLABEL$$</p>
+            <!--
+<div class="LoginFieldDesc">$$EMAILADDRESSLABEL$$</div>
+<div class="LoginFieldDesc">$$PASSWORDLABEL$$</div>
+-->
+            <div class="pad-20 pad-b-only">
+              $$EMAILADDRESSBOX$$
+              $$PASSWORDBOX$$
+              $$FORGOTPASSWORDLINK$$
+            </div>
+            $$LOGINBUTTON$$
+            <hr>
+            <h4>$$NEWCUSTOMERHEADER$$</h4>
+            <p>$$NEWCUSTOMERLABEL$$</p>
+            $$NEWCUSTOMERBUTTON$$
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>dontEscape = true;</script>
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>

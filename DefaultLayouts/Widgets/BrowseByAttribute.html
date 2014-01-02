@@ -1,0 +1,27 @@
+
+  <ac:visibilityarea id="dvControl">
+    <ul class="nav nav-stacked nav-pills">
+      <li><strong>$$HEADER$$</strong></li>
+      
+      <ac:layoutarea id="Item">
+        <ac:visibilityarea id="phHeader">
+          <li>$$GROUPHEADER$$</li>
+        </ac:visibilityarea>
+        
+        <li>
+          <ac:visibilityarea id="ckAtt">
+            <label class="checkbox" for="$$CHECKBOXID$$">
+              $$CHECKBOX$$ $$ATTRIBUTENAME$$
+            </label>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="hplAttribute">
+            <a class="attribute-link" href="$$ATTRIBUTEHREF$$">$$ATTRIBUTENAME$$<span class="badge pull-right">$$COUNT$$</span></a>
+          </ac:visibilityarea>
+        </li>
+        
+        <ac:visibilityarea id="phFooter">
+          <li>$$FILTERBUTTON$$</li>
+        </ac:visibilityarea>
+      </ac:layoutarea>
+    </ul>
+  </ac:visibilityarea>

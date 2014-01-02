@@ -1,0 +1,75 @@
+<ac:pagelayout id="EditDetailsPage">
+  <div class="row">
+    <div class="col-sm-3">
+      <ac:layoutarea id="Menu">
+        <div class="well">
+          <ul class="nav nav-stacked nav-pills">
+            <li class="nav-header"><strong>$$CUSTOMERNAME$$ Account</strong></li>
+            <li>$$DASHBOARD$$</li>
+            <li>$$EDITLOGIN$$</li>
+            <li>$$CHANGEPASSWORD$$</li>
+            <li>$$PROFILE$$</li>
+            <li>$$PROFILEEDIT$$</li>
+            <ac:visibilityarea id="dvPaymentInfo">
+              <li>$$PAYMENTMETHODS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="dvAddressArea">
+              <li>$$BILLINGADDRESS$$</li>
+              <li>$$SHIPPINGADDRESS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkEditDetails">
+              <li>$$EDITDETAILS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkStatement">
+              <li>$$STATEMENT$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkorderhistory">
+              <li>$$ORDERHISTORY$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkOrderPaymentHistory">
+              <li>$$PAYMENTS$$</li>
+            </ac:visibilityarea>
+            <li>$$ORDERS$$</li>
+            <ac:visibilityarea id="lnkSubscriptions">
+              <li>$$SUBSCRIPTIONS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkReviews">
+              <li>$$REVIEWS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkSavedCarts">
+              <li>$$SAVEDCARTS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkDownloads">
+              <li>$$DOWNLOADS$$</li>
+            </ac:visibilityarea>
+            <li>$$LOGOUT$$</li>
+          </ul>
+        </div>
+      </ac:layoutarea>
+    </div>
+    <div class="col-sm-9">
+      <div class="MyAccountPage">
+        <div class="breadcrumb"><a href="/store/myaccount.aspx">My Account</a> > Details</div>
+        
+        <div class="panel panel-default">
+          <div class="panel-heading">Account Details</div>
+          <div class="panel-body">
+            <ac:layoutarea id="CustomField">
+              <div class="full-input col-sm-6">
+                <label>
+                  $$FIELDNAME$$
+                  <div>$$FIELDCONTROL$$</div>
+                </label>
+              </div>
+            </ac:layoutarea>
+          </div>
+        </div>
+        <div class="right">
+          $$CONTINUEBUTTON$$</div>
+      </div>
+      <p>
+        $$VALIDATION$$
+      </p>
+    </div>
+  </div>
+</ac:pagelayout>

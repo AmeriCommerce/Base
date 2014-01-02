@@ -1,0 +1,483 @@
+<ac:pagelayout id="MyAccountPage">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  
+  <div class="row">
+    <div class="col-sm-3">
+      <ac:layoutarea id="Menu">
+        <div class="well">
+          <ul class="nav nav-stacked nav-pills">
+            <li class="nav-header"><strong>$$CUSTOMERNAME$$ Account</strong></li>
+            <li>$$DASHBOARD$$</li>
+            <li>$$EDITLOGIN$$</li>
+            <li>$$CHANGEPASSWORD$$</li>
+            <li>$$PROFILE$$</li>
+            <li>$$PROFILEEDIT$$</li>
+            <ac:visibilityarea id="dvPaymentInfo">
+              <li>$$PAYMENTMETHODS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="dvAddressArea">
+              <li>$$BILLINGADDRESS$$</li>
+              <li>$$SHIPPINGADDRESS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkEditDetails">
+              <li>$$EDITDETAILS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkStatement">
+              <li>$$STATEMENT$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkorderhistory">
+              <li>$$ORDERHISTORY$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkOrderPaymentHistory">
+              <li>$$PAYMENTS$$</li>
+            </ac:visibilityarea>
+            <li>$$ORDERS$$</li>
+            <ac:visibilityarea id="lnkSubscriptions">
+              <li>$$SUBSCRIPTIONS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkReviews">
+              <li>$$REVIEWS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkSavedCarts">
+              <li>$$SAVEDCARTS$$</li>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="lnkDownloads">
+              <li>$$DOWNLOADS$$</li>
+            </ac:visibilityarea>
+            <li>$$LOGOUT$$</li>
+          </ul>
+        </div>
+      </ac:layoutarea>
+    </div>
+    <div class="col-sm-9">
+      <div class="MyAccountPage">
+        <div style="float:left;width:100%;">
+          <div class="breadcrumb">My Account</div>
+          $$AFFILIATELINK$$
+          <div class="panel panel-default">
+            <h3 class="panel-heading no-margin">Account Summary</h3>
+            <div class="panel-body">
+              <div class="col-sm-4 pad-10 pad-b-only">
+                <div class="MyAccountLabel">Customer name:</div>
+                <div class="MyAccountValue">$$CUSTOMERNAME$$</div>
+              </div>
+              <div class="col-sm-4 pad-10 pad-b-only">
+                <div class="MyAccountLabel">Email:</div>
+                <div class="MyAccountValue">$$CUSTOMEREMAIL$$</div>
+              </div>
+              <ac:visibilityarea id="divCustomerUsername">
+                <div class="col-sm-4 pad-10 pad-b-only">
+                  <div class="MyAccountLabel">Username:</div>
+                  <div class="MyAccountValue">$$CUSTOMERUSERNAME$$</div>
+                </div>
+              </ac:visibilityarea>
+              <div class="col-sm-4 pad-10 pad-b-only">
+                <div class="MyAccountLabel">Password</div>
+                <div class="MyAccountValue">*****************</div>
+              </div>
+              <!--$$EDITLOGINBUTTON$$-->
+              <div class="col-sm-12 clearfix pad-10 pad-b-only">
+                <a href="/store/editLogin.aspx?myAccount=yes">Edit My Account Information</a>
+              </div>
+              <div class="col-sm-4 pad-10 pad-b-only">
+                <div class="MyAccountLabel">Registered:</div>
+                <div class="MyAccountValue">$$CUSTOMERREGISTERDATE$$</div>
+              </div>
+              <div class="col-sm-4 pad-10 pad-b-only">
+                <div class="MyAccountLabel">Total Orders:</div>
+                <div class="MyAccountValue">$$CUSTOMERORDERCOUNT$$</div>
+              </div>
+              <div class="col-sm-4 pad-10 pad-b-only">
+                <div class="MyAccountLabel">Total Items Purchased:</div>
+                <div class="MyAccountValue">$$CUSTOMERORDERITEMCOUNT$$</div>
+              </div>
+              <div class="col-sm-4 pad-10 pad-b-only">
+                <div class="MyAccountLabel">Total Spent:</div>
+                <div class="MyAccountValue">$$CUSTOMERORDERTOTAL$$</div>
+              </div>
+              <div class="col-sm-4 pad-10 pad-b-only">
+                <div class="MyAccountLabel">Remaining Balance:</div>
+                <div class="MyAccountValue">$$CUSTOMERORDERBALANCE$$</div>
+              </div>
+              <div class="col-sm-4 pad-10 pad-b-only">
+                <div class="MyAccountLabel">Balance Paid:</div>
+                <div class="MyAccountValue">$$CUSTOMERAMOUNTPAIDPERCENT$$</div>
+              </div>
+              <!-- Uncomment this if you want to show the percentage due isntead of paid ( or both )-->
+              <!--<div class="MyAccountSectionEntry">
+<div class="MyAccountLabel">Balance Due:</div>
+<div class="MyAccountValue">$$CUSTOMERAMOUNTDUEPERCENT$$</div>
+</div>-->
+              <div style="clear:left"></div>
+            </div>
+          </div>
+          
+          <ac:visibilityarea id="dvPaymentInfo">
+            <div class="panel panel-default">
+              <h3 class="panel-heading no-margin MyAccountSectionHeader">Payment Information</h3>
+              <div class="panel-body">
+                <div class="col-sm-4 pad-10 pad-b-only">
+                  <div class="MyAccountLabel">Default Payment Method:</div>
+                  <div class="MyAccountValue">$$PAYMENTMETHOD$$</div>
+                  <!--$$EDITPAYMENTMETHODBUTTON$$-->
+                  <div>
+                    <a href="/store/paymentMethod.aspx?myAccount=yes">Edit My Payment Methods</a>
+                  </div>
+                </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          
+          <ac:visibilityarea id="dvAddressArea">
+            <div class="panel panel-default">
+              <h3 class="panel-heading no-margin MyAccountSectionHeader">Address Information</h3>
+              <div class="panel-body">
+                <div class="col-sm-4 pad-10 pad-b-only">
+                  <div class="MyAccountLabel">Default Billing Address:</div>
+                  <div class="MyAccountValue">
+                    $$BILLINGADDRESS$$
+                    <div>
+                      <a href="/store/billingAddress.aspx?myAccount=yes">Edit My Billing Addresses</a>
+                    </div>
+                  </div>
+                  <!--$$EDITBILLINGADDRESSBUTTON$$-->
+                </div>
+                <div class="col-sm-4 pad-10 pad-b-only">
+                  <div class="MyAccountLabel">Default Shipping Address:</div>
+                  <div class="MyAccountValue">
+                    $$SHIPPINGADDRESS$$
+                    <div>
+                      <a href="/store/shippingAddress.aspx?myAccount=yes">Edit My Shipping Addresses</a>
+                    </div>
+                  </div>
+                  <!--$$EDITSHIPPINGADDRESSS$$-->
+                </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="RewardDetails">
+            <div class="panel panel-default">
+              <h3 class="panel-heading no-margin MyAccountSectionHeader">Rewards Details</h3>
+              <div class="panel-body">
+                <div class="col-sm-4 pad-10 pad-b-only">
+                  <div class="MyAccountLabel">$$ACTIVEREWARDPOINTSLABEL$$:</div>
+                  <div class="MyAccountValue">$$ACTIVEREWARDPOINTSTOTAL$$</div>
+                </div>
+                <div class="col-sm-4 pad-10 pad-b-only">
+                  <div class="MyAccountLabel">$$PENDINGREWARDPOINTSLABEL$$:</div>
+                  <div class="MyAccountValue">$$PENDINGREWARDPOINTSTOTAL$$ </div>
+                </div>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          
+          <div class="panel panel-default">
+            <h3 class="panel-heading no-margin MyAccountSectionHeader">Other Details</h3>
+            <div class="panel-body">
+              $$CUSTOMFIELDS$$
+              <div style="clear:both"></div>
+              <div class="pad-10 pad-t-only">
+                <a href="/store/EditDetails.aspx?myAccount=yes">Edit My Details</a>
+              </div>
+              <!--$$EDITCUSTOMFIELDSBUTTON$$-->
+            </div>
+          </div>
+          
+          <ac:visibilityarea id="rpGiftCertificates">
+            <div class="panel panel-default" id="tblGiftCertificates">
+              <h3 class="panel-heading no-margin MyAccountSectionHeader">Available Gift Certificates</h3>
+              <div class="panel-body">
+                <ac:layoutarea id="GiftCertificateListDetail">
+                  <div class="col-sm-4 pad-10 pad-b-only">
+                    <div class="MyAccountLabel">$$GIFTCERTIFICATECODE$$</div>
+                    <div class="MyAccountValue">Amount: $$GIFTCERTIFICATEAMOUNT$$</div>
+                    <div class="MyAccountValue">Expires: $$GIFTCERTIFICATEEXPIRATIONDATE$$</div>
+                  </div>
+                </ac:layoutarea>
+                <ac:layoutarea id="GiftCertificateListDetailAlt">
+                  <div class="col-sm-4 pad-10 pad-b-only">
+                    <div class="MyAccountLabel">$$GIFTCERTIFICATECODE$$</div>
+                    <div class="MyAccountValue">Amount: $$GIFTCERTIFICATEAMOUNT$$</div>
+                    <div class="MyAccountValue">Expires: $$GIFTCERTIFICATEEXPIRATIONDATE$$</div>
+                  </div>
+                </ac:layoutarea>
+                <div style="clear:both"></div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          
+          
+          <ac:visibilityarea id="ShowHideSubscriptions">
+            <div class="panel panel-default" id="Subscriptions">
+              <h3 class="panel-heading no-margin MyAccountSectionHeader ShowHideOrdersLink">$$SHOWHIDESUBSCRIPTIONSLINK$$</h3>
+              <div class="MyAccountSectionInner">
+                <div class="overflow-x-scroll">
+                  <table class="MyAccountShowHideTable table" id="tblSubscriptions">
+                    <thead>
+                      <tr class="OrderHistoryHeader">
+                        <th>Subscription</th>
+                        <th>Order Date</th>
+                        <th>Next Renewal</th>
+                        <th>Payment Method</th>
+                        <th>Last Payment Status</th>
+                        <th>Is Enabled</th>
+                      </tr>
+                    </thead>
+                    <ac:layoutarea id="SubscriptionDetail">
+                      <tr class="SubscriptionItem">
+                        <td>$$SUBSCRIPTIONNAME$$</td>
+                        <td>$$ORIGINALORDERDATE$$</td>
+                        <td>$$NEXTRENEWALDATE$$</td>
+                        <td>$$PAYMENTMETHOD$$ <a href="/Store/PaymentMethod.aspx?myAccount=true&SubscriptionID=##SUBSCRIPTIONID##">Edit</a></td>
+                        <td>$$LASTPAYMENTSTATUS$$</td>
+                        <td><a href="/Store/MyAccount.aspx?SubscriptionID=##SUBSCRIPTIONID##&ChangeIsEnabled=##TOGGLEENABLED##">##TOGGLEENABLED##</a></td>
+                      </tr>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="SubscriptionDetailAlt">
+                      <tr class="SubscriptionAltItem">
+                        <td>$$SUBSCRIPTIONNAME$$</td>
+                        <td>$$ORIGINALORDERDATE$$</td>
+                        <td>$$NEXTRENEWALDATE$$</td>
+                        <td>$$PAYMENTMETHOD$$ <a href="/Store/PaymentMethod.aspx?myAccount=true&SubscriptionID=##SUBSCRIPTIONID##">Edit</a></td>
+                        <td>$$LASTPAYMENTSTATUS$$</td>
+                        <td><a href="/Store/MyAccount.aspx?SubscriptionID=##SUBSCRIPTIONID##&ToggleEnabled=##TOGGLEENABLED##">##TOGGLEENABLED##</a></td>
+                      </tr>
+                    </ac:layoutarea>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          
+          <ac:visibilityarea id="ShowHideDownloads">
+            <div class="panel panel-default" id="Downloads">
+              <h3 class="panel-heading no-margin MyAccountSectionHeader ShowHideOrdersLink">$$SHOWHIDEDOWNLOADSLINK$$</h3>
+              <div class="MyAccountSectionInner">
+                <div class="overflow-x-scroll">
+                  <table class="MyAccountShowHideTable table" id="tblDownloads">
+                    <thead>
+                      <tr class="OrderHistoryHeader">
+                        <th>Item Name</th>
+                        <th>Order Date</th>
+                        <th>Download</th>
+                      </tr>
+                    </thead>
+                    <ac:layoutarea id="DownloadDetail">
+                      <tr class="DownloadItem">
+                        <td>$$ITEMNAME$$</td>
+                        <td>$$ORDERDATE$$</td>
+                        <td>$$DOWNLOADLINK$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="DownloadDetailAlt">
+                      <tr class="DownloadAltItem">
+                        <td>$$ITEMNAME$$</td>
+                        <td>$$ORDERDATE$$</td>
+                        <td>$$DOWNLOADLINK$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          
+          <ac:visibilityarea id="ShowHideOrders">
+            <div class="panel panel-default" id="Orders">
+              <h3 class="panel-heading no-margin MyAccountSectionHeader ShowHideOrdersLink">$$SHOWHIDEORDERSLINK$$</h3>
+              <div class="MyAccountSectionInner">
+                $$NOORDERS$$
+                <div class="overflow-x-scroll">
+                  <table class="MyAccountShowHideTable table" id="tblOrders">
+                    <thead>
+                      <tr class="OrderHistoryHeader">
+                        <th>Reorder</th>
+                        <th>Date</th>
+                        <th>Order #</th>
+                        <th>Total</th>
+                        <th>Order Status</th>
+                        <th>Tracking</th>
+                      </tr>
+                    </thead>
+                    <ac:layoutarea id="OrderDetail">
+                      <tr class="OrderHistoryItem">
+                        <td>$$REORDERLINK$$</td>
+                        <td>$$ORDERDATE$$</td>
+                        <td>$$ORDERNUMLINK$$</td>
+                        <td>$$ORDERTOTAL$$</td>
+                        <td>$$ORDERSTATUS$$</td>
+                        <td>$$ORDERTRACKINGLINK$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="OrderDetailAlt">
+                      <tr class="OrderHistoryAltItem">
+                        <td>$$REORDERLINK$$</td>
+                        <td>$$ORDERDATE$$</td>
+                        <td>$$ORDERNUMLINK$$</td>
+                        <td>$$ORDERTOTAL$$</td>
+                        <td>$$ORDERSTATUS$$</td>
+                        <td>$$ORDERTRACKINGLINK$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="OrderFooter">
+                    </ac:layoutarea>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          
+          <ac:visibilityarea id="ShowHideReviewsList">
+            <div class="panel panel-default" id="Reviews">
+              <h3 class="panel-heading no-margin MyAccountSectionHeader ShowHideOrdersLink">$$SHOWHIDEREVIEWSLINK$$</h3>
+              <div class="MyAccountSectionInner">
+                $$NOREVIEWS$$
+                <div class="overflow-x-scroll">
+                  <table class="MyAccountShowHideTable table" id="tblCustomerReviews">
+                    <thead>
+                      <tr class="OrderHistoryHeader">
+                        <th>Rating</th>
+                        <th>Date</th>
+                        <th>Product Name</th>
+                        <th>Review Title</th>
+                      </tr>
+                    </thead>
+                    <ac:layoutarea id="ReviewsListDetail">
+                      <tr class="OrderHistoryItem">
+                        <td>$$REVIEWRATING$$</td>
+                        <td>$$REVIEWDATE$$</td>
+                        <td>$$PRODUCTNAME$$</td>
+                        <td>$$REVIEWTITLE$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="ReviewsListDetailAlt">
+                      <tr class="OrderHistoryAltItem">
+                        <td>$$REVIEWRATING$$</td>
+                        <td>$$REVIEWDATE$$</td>
+                        <td>$$PRODUCTNAME$$</td>
+                        <td>$$REVIEWTITLE$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          
+          
+          <ac:visibilityarea id="ShowHideSavedCartList">
+            <div class="panel panel-default" id="SavedCarts">
+              <h3 class="panel-heading no-margin MyAccountSectionHeader ShowHideOrdersLink">$$SHOWHIDESAVEDCARTLINK$$</h3>
+              <div class="MyAccountSectionInner">
+                <div class="overflow-x-scroll">
+                  <table class="MyAccountShowHideTable table" id="tblCustomerSavedCarts">
+                    <ac:layoutarea id="SavedCartListHeader">
+                      <thead>
+                        <tr class="OrderHistoryHeader">
+                          <th></th>
+                          <th>$$CARTDATESORTABLEHEADER$$</th>
+                          <th>$$CARTNAMESORTABLEHEADER$$</th>
+                          <th>$$CARTTYPESORTABLEHEADER$$</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="SavedCartListDetail">
+                      <tr class="OrderHistoryItem">
+                        <td>$$VIEWCARTLINK$$</td>
+                        <td>$$CARTENTERDATE$$</td>
+                        <td>$$CARTNAME$$</td>
+                        <td>$$CARTTYPE$$</td>
+                        <td>$$DELETESAVEDCART$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="SavedCartListDetailAlt">
+                      <tr class="OrderHistoryAltItem">
+                        <td>$$VIEWCARTLINK$$</td>
+                        <td>$$CARTENTERDATE$$</td>
+                        <td>$$CARTNAME$$</td>
+                        <td>$$CARTTYPE$$</td>
+                        <td>$$DELETESAVEDCART$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          
+          <ac:visibilityarea id="AssociatedAccountsContainer">
+            <div class="panel panel-default">
+              <div class="MyAccountSectionInner">
+                <h3 class="panel-heading no-margin  ShowHideOrdersLink">$$SHOWHIDEASSOCIATEDACCOUNTSLINK$$</h3>
+                <div class="overflow-x-scroll">
+                  <table class="MyAccountShowHideTable table" id="tblAssociatedAccounts">
+                    <ac:layoutarea id="AssociatedAccountsHeader">
+                      <thead>
+                        <tr class="AssociatedAccountsHeader">
+                          <th>$$CUSTOMERIDHEADER$$</th>
+                          <th>$$CUSTOMERNUMBERHEADER$$</th>
+                          <th>$$COMPANYHEADER$$</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="AssociatedAccountsDetail">
+                      <tr class="AssociatedAccountsItem">
+                        <td>$$CUSTOMERID$$</td>
+                        <td>$$CUSTOMERNUMBER$$</td>
+                        <td>$$CUSTOMERCOMPANY$$</td>
+                        <td>$$ASSOCIATEDCUSTOMERLOGINBUTTON$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="AssociatedAccountsDetailAlt">
+                      <tr class="AssociatedAccountsItem">
+                        <td>$$CUSTOMERID$$</td>
+                        <td>$$CUSTOMERNUMBER$$</td>
+                        <td>$$CUSTOMERCOMPANY$$</td>
+                        <td>$$ASSOCIATEDCUSTOMERLOGINBUTTON$$</td>
+                      </tr>
+                    </ac:layoutarea>
+                    <ac:layoutarea id="AssociatedAccountsFooter">
+                    </ac:layoutarea>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          <script>
+            $(function(){
+              var hash = location.hash.replace("#","").toLowerCase();
+              
+              switch(hash){
+                case "subscriptions":{
+                  toggleSubscriptions();
+                  break;
+                }
+                case "reviews":{
+                  toggleCustomerReviews();
+                  break;
+                }
+                case "savedcarts":{
+                  toggleSavedCarts();
+                  break;
+                }
+                case "orders":{
+                  toggleOrders();
+                  break;
+                }
+              }
+            }); 
+          </script>
+        </div>
+      </div>
+      <div style="clear:left"></div>
+      <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+    </div>
+  </div>
+</ac:pagelayout>

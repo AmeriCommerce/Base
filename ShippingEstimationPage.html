@@ -1,0 +1,47 @@
+<ac:pagelayout id="ShippingEstimationPage">
+  <script>
+    dontEscape = true;
+  </script>
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  <div class="panel panel-default">
+    <div class="panel-heading">$$SHIPPINGESTIMATIONHEADER$$</div>
+    
+    <div class="panel-body">
+      <p class="ShippingEstimationHelpText">$$HELPTEXT$$</p>
+      
+      <div class="ShippingEstimationItemInfo center pad-20 pad-b-only">
+        $$QUANTITYTEXTBOX$$ x $$ITEMNAME$$
+      </div>
+      
+      <br>
+      
+      <table class="ShippingEstimationForm">
+        $$COUNTRY$$
+        $$ZIPCODE$$
+        <tr>
+          <td class="ShippingEstimationFormInput">
+            $$ESTIMATEBUTTON$$
+          </td>
+        </tr>
+      </table>
+      
+      
+      <br>
+      
+      <ac:layoutarea id="ShippingMethodList">
+        <tr>
+          <td class="ShippingEstimationRateName">
+            $$DESCRIPTION$$
+          </td> 
+          <td class="ShippingEstimationRate">
+            $$TOTAL$$
+          </td>
+        </tr>
+      </ac:layoutarea>
+    </div>
+  </div>
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  
+</ac:pagelayout>

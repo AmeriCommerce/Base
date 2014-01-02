@@ -1,0 +1,36 @@
+
+  <ac:visibilityarea id="dvControl">
+    <div class="center pad-t-10">
+      <a class="block" href="/store/shopcart.aspx">View Cart</a>
+      <a class="block" href="/store/checkout.aspx">Checkout</a>
+    </div>
+    <div class="panel center">
+      <div class="panel-body no-wrap">
+        <strong class="block pad-b-20">$$CARTITEMSLABEL$$</strong>
+        
+        <ac:layoutarea id="ShopCartItem">
+          <div class="SmallCartItem pad-b-20">
+            <div>$$ITEMLINK$$</div>
+            <div>$$QUANTITYBOX$$ x $$PRICE$$</div>
+          </div>
+        </ac:layoutarea>
+        <div>
+          $$UPDATEQTYLINK$$
+        </div>
+        
+        <div class="SmallCartSubTotal pad-20 bold">
+          $$SUBTOTAL$$
+        </div>
+        $$ERROR$$
+        <div>
+          $$VIEWCARTLINK$$
+        </div>
+        <div>
+          $$CLEARCARTLINK$$
+        </div>
+        <div class="SmallCartCheckoutButton pad-20 no-pad-b">
+          $$CHECKOUTBUTTON$$
+        </div>
+      </div>
+    </div>
+  </ac:visibilityarea>

@@ -1,0 +1,83 @@
+<ac:pagelayout id="BlogListPage" authorimageheight="150" blogpicheight="100" postteaserimageheight="100" resizepostteaserimage="True" resizepicture="True" postcount="2" blogpicwidth="100" resizeauthorimage="True" postimagewidth="150" postteaserimagewidth="100" resizepostimage="True" postimageheight="150" authorimagewidth="150">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  
+  <div class="ControlHeader PostsForMonthYear"><h1>$$POSTSFORMONTHYEAR$$</h1></div>
+  
+  $$BLOGS$$
+  
+  <ac:layoutarea id="Blog">
+    <section class="Blog">
+      <h1 class="BlogListBlogName"><a href="$$BLOGURL$$">$$BLOGIMAGE$$ $$BLOGNAME$$</a></h1>
+      <div class="BlogListBlogDescription">
+        $$BLOGDESCRIPTION$$
+      </div>
+      <div class="BlogRoll">
+        $$BLOGROLL$$
+      </div>
+    </section>
+  </ac:layoutarea>
+  
+  <ac:layoutarea id="BlogPostLayout">
+    <div class="BlogRoll">$$GROUP$$</div>
+  </ac:layoutarea>
+  <ac:layoutarea id="BlogPostGroup">
+    <article class="BlogPost">
+      $$POST$$
+    </article>
+  </ac:layoutarea>
+  <ac:layoutarea id="BlogPost">     
+    <h2 class="BlogPostTitle"><a href="##BLOGPOSTURL##">$$TITLE$$</a></h2>
+    <div class="BlogPostPostedOnBy">by $$AUTHORLINK$$ on $$POSTDATETIME$$</div>
+    <div class="BlogPostCommentCount"><a href="##BLOGPOSTURL###BlogPostComments">$$COMMENTCOUNTANCHORLINK$$</a></div>
+    <div class="BlogPostAddCommentLink">$$ADDACOMMENTANCHORLINK$$</div>
+    <div class="BlogPostImage">$$IMAGE$$</div>
+    <div class="BlogPostTeaserTitle"><strong>$$TEASERTITLE$$</strong></div>
+    <div class="BlogPostTeaserDesc">
+      <p>
+        $$TEASERDESCRIPTION$$
+      </p>
+    </div>
+    <div class="BlogPostContent">
+      <p>
+        ##TRIM[1000]## $$CONTENT$$ ##ENDTRIM##
+      </p>
+    </div>
+    <div class="BlogPostCategoryAndTags">
+      $$POSTCATEGORIESLABEL$$ $$POSTCATEGORIES$$.
+      $$POSTTAGS$$
+    </div>
+    <div style="clear:both;"></div>
+    <div class="BlogPostComments $$HIDECOMMENTS$$">
+      <div class="BlogPostCommentsHeader">
+        $$COMMENTSHEADER$$
+        <div>$$COMMENTLINK$$</div>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    <div class="BlogPostCommentsBody $$HIDECOMMENTS$$">
+      $$COMMENTMODERATIONMESSAGE$$
+      $$COMMENTS$$
+      
+      <div class="BlogPostCommentsAdd BlogPostComment" style="clear:both;">
+        $$ADDACOMMENTHEADER$$ <br>
+        <div class="BlogPostCommentProfileImage">
+          $$POSTNEWCOMMENTPROFILEIMAGE$$
+        </div>
+        <div class="BlogPostCommentDisplayName">
+          <div>$$DISPLAYNAMETEXT$$</div>
+          $$DISPLAYNAMETEXTBOX$$
+        </div>
+        $$POSTNEWCOMMENTPROFILENAME$$
+        <div>$$POSTAS$$ $$POSTASDROPDOWN$$</div>
+        $$NEWCOMMENTTEXT$$
+        <div>$$POSTCOMMENTBUTTON$$</div>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    
+  </ac:layoutarea>
+  
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>

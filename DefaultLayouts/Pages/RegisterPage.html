@@ -1,0 +1,173 @@
+<ac:pagelayout id="RegisterPage">
+  <script>
+    dontEscape = true;
+  </script>
+  <div class="page-header"><h1>Registration</h1></div>
+  
+  <div>$$ERRORTEXT$$</div>
+  <ac:widgetarea id="Top">
+  </ac:widgetarea>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <p>Please enter your information below:</p>
+          <p><strong>Note:</strong> All required fields are marked with an *
+          </p>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6 pad-b-20 full-input">
+              <label>
+                First Name *
+                <div>$$FIRSTNAMETEXTBOX$$</div>
+              </label>
+            </div>
+            <div class="col-sm-6 pad-b-20 no-m-b full-input">
+              <label>
+                Last Name *
+                <div>$$LASTNAMETEXTBOX$$</div>
+              </label>
+            </div>
+          </div>
+          <ac:visibilityarea id="trCompany">
+            
+            <div class="row">
+              <div class="col-sm-6 pad-b-20 full-input">
+                <label>
+                  Company *
+                  <div>$$COMPANYTEXTBOX$$</div>
+                </label>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          <div class="row">
+            <div class="pad-b-20 full-input col-sm-6">
+              <label>
+                Email Address *
+                <div>$$EMAILADDRESSTEXTBOX$$</div>
+              </label>
+            </div>
+            <div class="pad-b-20 full-input col-sm-6 no-m-b">
+              <label>
+                Display Name
+                <div>$$DISPLAYNAMETEXTBOX$$</div>
+              </label>
+              <div class="muted size-small">This is the name that will be shown on your public profile as well as on any blog comments.</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="pad-b-20 full-input col-sm-6">
+              <label>
+                Password *
+                <div>$$PASSWORDTEXTBOX$$</div>
+              </label>
+            </div>
+            <div class="pad-b-20 full-input col-sm-6 no-m-b">
+              <label>
+                Confirm Password *
+                <div>$$CONFIRMPASSWORDTEXTBOX$$</div>
+              </label>
+            </div>
+          </div>
+          <ac:visibilityarea id="lblAddress1">
+            <div class="row">
+              <div class="pad-b-20 full-input col-sm-6">
+                <label>
+                  Adress Line 1 *
+                  <div>$$ADDRESSTEXTBOX1$$</div>
+                </label>
+              </div>
+              <div class="pad-b-20 full-input col-sm-6 no-m-b">
+                <label>
+                  Address Line 2
+                  <div>$$ADDRESSTEXTBOX2$$</div>
+                </label>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="lblState">
+            
+            <div class="row">
+              <div class="pad-b-20 full-input col-sm-6">
+                <label>
+                  City *
+                  <div>$$CITYTEXTBOX$$</div>
+                </label>
+              </div>
+              <div class="pad-b-20 full-input col-sm-6 no-m-b">
+                <label>
+                  State *
+                  <div>
+                    $$STATEDROPDOWN$$
+                    $$STATETEXTBOX$$
+                  </div>
+                </label>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="lblZipCode">
+            
+            <div class="row">
+              <div class="pad-b-20 full-input col-sm-6">
+                <label>
+                  Postal Code *
+                  <div>$$ZIPCODETEXTBOX$$</div>
+                </label>
+              </div>
+              <div class="pad-b-20 full-input col-sm-6 no-m-b">
+                <label>
+                  Country *
+                  <div>
+                    $$COUNTRYDROPDOWN$$
+                  </div>
+                </label>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="lblPhone">
+            
+            <div class="row">
+              <div class="pad-b-20 full-input col-sm-6">
+                <label>
+                  Phone Number *
+                  <div>$$PHONETEXTBOX$$</div>
+                </label>
+              </div>
+              <ac:visibilityarea id="tdFaxNumber">
+                <div class="pad-b-20 full-input col-sm-6 no-m-b">
+                  <label>
+                    Fax
+                    <div>
+                      $$FAXTEXTBOX$$
+                    </div>
+                  </label>
+                </div>
+              </ac:visibilityarea>
+            </div>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="trDontRememberMe">
+            <div class="pad-b-20">
+              $$DONOTREMEMBERME$$
+            </div>
+          </ac:visibilityarea>
+          <!-- additional registration stuff
+
+<!--
+$$CUSTOMFIELDS$$
+-->
+          <div class="pad-b-20">
+            <label>$$MAILINGLISTCHECKBOX$$ $$MAILINGLISTLABEL$$</label>
+          </div>
+          <div class="right">$$REGISTERBUTTON$$</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <ac:widgetarea id="Bottom">
+  </ac:widgetarea>
+  
+  
+  
+</ac:pagelayout>

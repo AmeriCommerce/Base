@@ -1,0 +1,74 @@
+<ac:pagelayout id="CatalogPage" pagingtype="NumberedPageLinks">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  
+  <div class="page-header">
+    <h1>Catalog</h1>
+  </div>
+  <p>
+    Use this page to order multiple items at once by entering the quantity you want for each item and adding them all to the cart.
+  </p>
+  
+  <div class="CatalogAddToCartButton">
+    $$TOPPAGEADDTOCARTBUTTON$$
+  </div>
+  <ac:visibilityarea id="TopNavigationArea">
+    <div class="clearfix pad-20 no-pad-lr">
+      <div class="in-block v-mid pad-r-20 pad-t-5">$$PRODUCTCOUNTTOP$$</div>
+      <div class="in-block v-mid pad-r-20">$$SORTBYDROPDOWN$$</div>
+      <div class="in-block v-mid pad-r-20">$$NUMBERPERPAGEDROPDOWNLABEL$$ $$SHOWBYPAGESIZE$$</div>
+      <div class="f-right pad-t-5">$$PRODUCTLISTPAGENAVIGATIONTOP$$</div>      
+    </div>    
+  </ac:visibilityarea>
+  
+  <div class="media-list">
+    <ac:layoutarea id="ProductList">
+      <ac:visibilityarea id="CategoryTrailArea">
+        <div class="CatalogCategoryTrail breadcrumb" id="dvCategoryTrail">
+          $$CATEGORYTRAIL$$
+        </div>
+      </ac:visibilityarea>
+      <div class="pad-20">
+        <div class="media">
+          <div class="pull-left">
+            <img src="/resize##ITEMPHOTOURL##?bw=75&lr=t" onerror="$(this).remove()">
+          </div>
+          <div class="media-body">
+            <div class="CatalogProductName h4 pad-b-10">
+              $$PRODUCTLINK$$
+              <span class="CatalogProductMfgName text-muted size-small">
+                - $$MANUFACTURERLINK$$
+              </span>
+            </div>
+            <div class="CatalogItemQuantityBox in-block v-mid">
+              $$QUANTITYBOX$$
+            </div>
+            
+            <div class="CatalogItemPriceArea in-block v-mid">
+              $$PRICE$$
+            </div>
+            <p>
+              ##TRIM[250]## ##LONGDESCRIPTION1## ##ENDTRIM##
+            </p>
+          </div>
+        </div>
+      </div>
+    </ac:layoutarea>
+  </div>
+  <ac:visibilityarea id="BottomNavigationArea">
+    <div class="clearfix pad-20 no-pad-lr">
+      <div class="f-left pad-r-20 pad-t-10">$$PRODUCTCOUNTTOP$$</div>
+      <div class="f-left pad-r-20">$$SORTBYDROPDOWN$$</div>
+      <div class="f-left pad-r-20">$$NUMBERPERPAGEDROPDOWNLABEL$$ $$SHOWBYPAGESIZE$$</div>
+      <div class="f-right pad-t-10">$$PRODUCTLISTPAGENAVIGATIONTOP$$</div>      
+    </div>  
+  </ac:visibilityarea>
+  
+  
+  <div class="CatalogAddToCartButton">
+    $$BOTTOMPAGEADDTOCARTBUTTON$$
+  </div>
+  
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>

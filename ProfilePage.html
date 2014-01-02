@@ -1,0 +1,113 @@
+<ac:pagelayout id="ProfilePage">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  
+  $$PROFILEBANNED$$
+  $$PROFILESUSPENDED$$
+  <ac:visibilityarea id="ProfileInfoArea">
+    <div class="page-header">
+      <h1>$$NAME$$'s Profile</h1>
+    </div>
+    <div class="media pad-b-20">
+      <div class="pull-left">$$IMAGE$$</div>
+      <div class="media-body">
+        <table class="ProfileInfoTable" id="tblProfile">
+          <tr>
+            <td>Company:</td>
+            <td>$$COMPANY$$</td>
+          </tr>
+          <tr>
+            <td>Title:</td>
+            <td>$$TITLE$$</td>
+          </tr>
+          <tr>
+            <td colspan="2">About:</td>
+          </tr>
+          <tr>
+            <td colspan="2">$$ABOUT$$</td>
+          </tr>
+          $$CONTACTLIST$$
+          <tr>
+            <td colspan="2">$$EDITPROFILELINK$$</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </ac:visibilityarea>
+  
+  <ac:layoutarea id="ContactTypes">
+    <tr>
+      <td>$$NAME$$:</td>
+      <td>$$VALUELINK$$</td>
+    </tr>
+  </ac:layoutarea>
+  
+  <ac:visibilityarea id="PostsArea">
+    <div class="panel panel-default">
+      <div class="panel-heading">My Blog Posts</div>
+      <div class="overflow-x-scroll panel-body">
+        <table class="table" id="tblBlogPosts" width="100%">
+          <thead>
+            <tr>
+              <th>Blog</th>
+              <th>Post</th>
+              <th>Published</th>
+            </tr>
+          </thead>
+          $$BLOGPOSTLIST$$
+        </table>
+      </div>
+    </div>
+  </ac:visibilityarea>
+  
+  <ac:layoutarea id="BlogPosts">
+    <tr><td>$$BLOGLINK$$</td><td>$$TITLELINK$$</td><td>$$PUBDATE$$</td></tr>
+  </ac:layoutarea>
+  
+  <ac:visibilityarea id="CommentsArea">
+    <div class="panel panel-default">
+      <div class="panel-heading">My Blog Comments</div>
+      <div class="overflow-x-scroll panel-body">
+        <table class="table" id="tblBlogComments" width="100%">
+          <thead>
+            <tr>
+              <th>Blog</th>
+              <th>Post Title</th>
+              <th>Comment Posted</th>
+            </tr>
+          </thead>
+          $$BLOGCOMMENTS$$
+        </table>
+      </div>
+    </div>
+  </ac:visibilityarea>
+  
+  <ac:layoutarea id="BlogComments">
+    <tr><td>$$BLOGLINK$$</td><td>$$POSTLINK$$</td><td>$$COMMENTLINK$$</td></tr>
+  </ac:layoutarea>
+  
+  <ac:visibilityarea id="ReviewsArea">
+    <div class="panel panel-default">
+      <div class="panel-heading">My Reviews</div>
+      <div class="overflow-x-scroll panel-body">
+        <table class="table" id="tblReviews" width="100%">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Title</th>
+              <th>Rating</th>
+            </tr>
+          </thead>
+          $$REVIEWLIST$$
+        </table>
+      </div>
+    </div>
+  </ac:visibilityarea>
+  
+  <ac:layoutarea id="Reviews">
+    <tr><td>$$PRODUCTLINK$$</td><td>$$REVIEWLINK$$</td><td>$$RATING$$</td></tr>
+  </ac:layoutarea>
+  
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>

@@ -1,0 +1,129 @@
+<ac:pagelayout id="BlogPostPage" commentspagesize="50" commentsprofilepicheight="90" resizepostimage="False" commentsortorder="Oldest" authorimageheight="50" authorimagewidth="50" commentsprofilepicwidth="90">
+  <div class="BlogPostPage" itemtype="http://schema.org/BlogPosting">
+    <ac:widgetarea id="Top">
+</ac:widgetarea>
+    
+    <div class="BlogBreadCrumb pad-b-10">
+      <a href="##BLOGURL##">&larr; Back to Blog Roll</a>
+    </div>
+    <script>
+      $(".BlogBreadCrumb").prependTo(".LayoutMiddle > .LayoutMiddle")
+    </script>
+    <article class="PostContent">
+      
+      <h1 class="BlogPostTitle" itemprop="name headline">$$TITLE$$</h1>
+      <div class="BlogPostPostedOnBy pad-20 no-pad-lr "><span class="InBlock AuthorImage">$$AUTHORIMAGE$$</span> by <span itemprop="author" itemscope="" itemtype="http://schema.org/Person"><span itemprop="name">$$AUTHORLINK$$</span></span> | <time itemprop="datePublished">$$POSTDATE$$</time> | <span class="BlogPostCommentCount"><a href="##BLOGPOSTURL###BlogPostComments">$$COMMENTCOUNTANCHORLINK$$</a></span></div>
+      
+      <div style="clear:both"></div>
+      <div class="BlogPostImage pad-30 no-pad-lr no-pad-t">$$IMAGE$$</div>
+      <div class="pad-30 no-pad-t no-pad-lr">
+        ##FACEBOOKLIKEBUTTON##
+      </div>
+      <div class="BlogPostContent" itemprop="articleBody">$$CONTENT$$</div>
+      <div class="BlogPostCategoryAndTags">
+        $$POSTCATEGORIESLABEL$$ $$POSTCATEGORIES$$.
+        $$POSTTAGS$$
+      </div>
+      ##SOCIALBOOKMARKS##
+      <div class="Clear pad-50 no-pad-lr no-pad-b"><hr></div>
+      <div class="BlogPostComments $$HIDECOMMENTS$$">
+        <div class="pad-50 no-pad-lr pad-t-20">
+          <div class="BlogPostCommentsHeader">$$COMMENTCOUNT$$ $$COMMENTSHEADER$$  </div>
+          <div class="BlogPostAddCommentLink">$$ADDACOMMENTANCHORLINK$$</div>
+          <!--<div>
+$$COMMENTSSORTBYTEXT$$ $$COMMENTSSORTBY$$
+<div style="float:right;">$$COMMENTPAGESIZESHOWLABEL$$ $$COMMENTPAGESIZE$$ $$COMMENTSPERPAGELABEL$$</div>
+</div>
+<div>$$COMMENTPOSTCOUNT$$</div>-->
+        </div>
+        <div style="clear:both;"></div>
+        $$COMMENTMODERATIONMESSAGE$$
+        <div class="BlogPostCommentsBody" id="BlogPostComments">
+          
+          <ac:layoutarea id="BlogPostComment">
+            <div class="BlogPostComment media $$ADMINCOMMENTCSSCLASS$$ $$AUTHORCOMMENTCSSCLASS$$">
+              $$COMMENTANCHOR$$
+              <div class="BlogPostCommentProfile pull-left size-small center">
+                <div class="BlogPostCommentProfileImage">
+                  $$PROFILEIMAGE$$
+                </div>
+                
+                <div class="BlogPostCommentsProfileCount">$$PROFILECOMMENTCOUNT$$ comment(s)</div>
+              </div>
+              <div class="BlogPostCommentText media-body">
+                <div class="BlogPostCommentNameDate">
+                  $$PROFILENAME$$
+                  <span class="AdminCommentLabel $$ADMINCOMMENTCSSCLASS$$">$$ADMINCOMMENTLABEL$$</span>
+                  <span class="AuthorCommentLabel $$AUTHORCOMMENTCSSCLASS$$">$$AUTHORCOMMENTLABEL$$</span>
+                  $$COMMENTDATE$$
+                </div>
+                <div class="pad-20 no-pad-lr">$$COMMENTTEXT$$</div>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+            <div class="Clear pad-10 no-pad-lr"><hr></div>
+          </ac:layoutarea>
+          
+          <ac:layoutarea id="BlogPostCommentAlt">
+            <div class="BlogPostComment media BlogPostCommentAlt $$ADMINCOMMENTCSSCLASS$$ $$AUTHORCOMMENTCSSCLASS$$">
+              $$COMMENTANCHOR$$
+              <div class="BlogPostCommentProfile pull-left size-small center">
+                <div class="BlogPostCommentProfileImage">
+                  $$PROFILEIMAGE$$
+                </div>
+                
+                <div class="BlogPostCommentsProfileCount">$$PROFILECOMMENTCOUNT$$ comment(s)</div>
+              </div>
+              <div class="BlogPostCommentText media-body">
+                <div class="BlogPostCommentNameDate">
+                  $$PROFILENAME$$
+                  <span class="AdminCommentLabel $$ADMINCOMMENTCSSCLASS$$">$$ADMINCOMMENTLABEL$$</span>
+                  <span class="AuthorCommentLabel $$AUTHORCOMMENTCSSCLASS$$">$$AUTHORCOMMENTLABEL$$</span>
+                  $$COMMENTDATE$$
+                </div>
+                <div class="pad-20 no-pad-lr">$$COMMENTTEXT$$</div>
+              </div>
+              <div style="clear:both;"></div>
+            </div>
+            <div class="Clear pad-10 no-pad-lr"><hr></div>
+          </ac:layoutarea>
+          
+          <ac:layoutarea id="BlogCommentFooter">
+            <div style="clear:both;"></div>
+            <div class="BlogPostCommentFooter" style="clear:both;">
+              $$COMMENTPAGING$$
+            </div>
+          </ac:layoutarea>
+          
+          <div class="BlogPostCommentsAdd BlogPostComment" style="clear:both;">
+            $$ADDACOMMENTHEADER$$
+            
+            <div class="$$HIDEADDCOMMENTBOX$$ media">
+              $$COMMENTSERRORTEXT$$
+              <div class="BlogPostCommentDisplayName pull-left">
+                $$POSTNEWCOMMENTPROFILEIMAGE$$            
+                <div class="BlogPostCommentProfileName">
+                  <div>$$POSTNEWCOMMENTPROFILENAME$$</div>
+                </div>
+                $$DISPLAYNAMETEXT$$
+                $$DISPLAYNAMETEXTBOX$$
+                <div>$$POSTAS$$</div>
+                <div>$$POSTASDROPDOWN$$</div>
+              </div>
+              <div class="BlogPostCommentTextBox media-body">
+                $$NEWCOMMENTTEXT$$
+                <div class="BlogPostCommentAddButton pad-20 no-pad-lr">$$POSTCOMMENTBUTTON$$</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        
+      </script>
+    </article>
+    
+    <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+  </div>
+</ac:pagelayout>

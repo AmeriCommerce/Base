@@ -1,0 +1,85 @@
+<ac:pagelayout id="OrderPaymentHistoryPage">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  
+  $$MYACCOUNTMENU$$
+  
+  <div class="MyAccountPage">
+    <div style="float:left;width:100%;"> 
+      <h1>My Order Payment History</h1>
+      
+      <ac:visibilityarea id="PaymentDownloadArea">
+        <div class="MyAccountSection">
+          <div class="MyAccountSectionInner">
+            <h3 class="MyAccountSectionHeader">Download</h3>
+            $$DOWNLOADPAYMENTHISTORYBUTTON$$   
+          </div>
+        </div>
+      </ac:visibilityarea>
+      
+      <div class="MyAccountSection">
+        <h3 class="MyAccountSectionHeader">Payments</h3>
+        <div class="MyAccountSectionInner">
+          $$NORECORDS$$
+          <table class="OrderPaymentHistoryTable MyAccountTable" width="100%" border="0" cellpadding="3" cellspacing="0">
+            <ac:layoutarea id="ItemHeader">
+              <tr class="OrderPaymentHistoryHeader">
+                <th class="StatmentHeader" align="left">
+                  $$PAYMENTNOTEHEADER$$
+                </th>
+                <th class="OrderPaymentHistoryHeader" align="left">
+                  $$PAYMENTDATEHEADER$$
+                </th>
+                <th class="OrderPaymentHistoryHeader" align="center">
+                  $$PAYMENTAMOUNTHEADER$$
+                </th>
+                <th class="OrderPaymentHistoryHeader" align="center">
+                  $$PAYMENTAPPROVEDDATEHEADER$$
+                </th>
+                <th class="OrderPaymentHistoryHeader" align="center">
+                  $$PAYMENTTYPEHEADER$$
+                </th>
+              </tr>
+            </ac:layoutarea>
+            <ac:layoutarea id="ItemDetail">
+              <tr class="OrderPaymentHistoryItem">
+                <td>
+                  <div class="OrderPaymentHistoryNote">$$PAYMENTNOTE$$</div>
+                </td>
+                <td>
+                  <span class="OrderPaymentHistoryPaymentDate">$$PAYMENTDATE$$</span>
+                </td>
+                <td align="right">
+                  <div class="OrderPaymentHistoryTotal">$$PAYMENTAMOUNT$$</div></td>
+                <td align="right">
+                  <div class="OrderPaymentHistoryApproveDate">$$PAYMENTAPPROVEDDATE$$</div>
+                </td>
+                <td align="center"><div class="OrderPaymentHistoryPaymentType">$$PAYMENTTYPE$$</div></td>
+              </tr>
+            </ac:layoutarea>
+            <ac:layoutarea id="ItemDetailAlt">
+              <tr class="OrderPaymentHistoryItem">
+                <td>
+                  <div class="OrderPaymentHistoryNote">$$PAYMENTNOTE$$</div>
+                </td>
+                <td>
+                  <span class="OrderPaymentHistoryPaymentDate">$$PAYMENTDATE$$</span>
+                </td>
+                <td align="right">
+                  <div class="OrderPaymentHistoryTotal">$$PAYMENTAMOUNT$$</div></td>
+                <td align="right">
+                  <div class="OrderPaymentHistoryApproveDate">$$PAYMENTAPPROVEDDATE$$</div>
+                </td>
+                <td align="center"><div class="OrderPaymentHistoryPaymentType">$$PAYMENTTYPE$$</div></td>
+              </tr>
+            </ac:layoutarea>
+            <ac:layoutarea id="ItemFooter">
+            </ac:layoutarea>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>

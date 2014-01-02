@@ -1,0 +1,207 @@
+<ac:pagelayout id="OrderInvoicePage">
+  <div class="container">
+    <style>
+      body{background-image:none;background-color:#fff;}
+      .logo { max-height:100px; }
+      .logo img { max-height:50px; }
+      .panel-heading { padding:5px 15px; }
+      .panel-body { padding:5px 15px; }
+      .panel-body br + br, .panel-body > br:first-child, .StoreInfoText br:first-child { display:none;}
+      .panel-body table { margin:0; }
+      .table thead>tr>th, .table tbody>tr>th, .table tfoot>tr>th, .table thead>tr>td, .table tbody>tr>td, .table tfoot>tr>td { padding:5px; }
+    </style>
+    <ac:widgetarea id="Top">
+<ac:widget id="HTML2416" type="HTML">
+        
+      </ac:widget>
+</ac:widgetarea>
+    
+    <div class="row page-header no-m-t">
+      <div class="col-xs-6">
+        <div class="pull-left logo pad-10 no-pad-l">
+          $$LOGO$$
+        </div>
+        <div class="media-body pad-10">
+          <strong class="h4">$$STORENAME$$</strong>
+          <div class="size-small">
+            $$STOREADDRESS$$
+            $$STOREPHONE$$
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 right no-m-b">
+        <h4>Order #$$ORDERNUMBER$$</h4>
+        <h5>Placed $$ORDERDATE$$</h5>
+      </div>
+    </div>
+    
+    <p class="center">This is your receipt.&nbsp; Please print it for your records.</p>
+    <ac:visibilityarea id="PaymentStatusContainer">
+      <div class="panel panel-default">
+        <div class="panel-heading">Payment Status:</div>
+        <div class="panel-body">
+          <p>$$PAYMENTSTATUS$$</p>
+        </div>
+      </div>
+    </ac:visibilityarea>
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">Payment Information</div>
+          <div class="panel-body">
+            <div>$$PAYMENTMETHOD$$</div>
+            <div>$$BILLINGADDRESS$$</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 no-m-b">
+        <div class="panel panel-default">
+          <div class="panel-heading">Shipping Address</div>
+          <div class="panel-body">
+            $$SHIPPINGADDRESS$$            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        
+        <ac:visibilityarea id="CustomFieldContainer">
+          <div class="panel panel-default">
+            <div class="panel-heading">Additional Order Details</div>
+            <div class="panel-body">
+              $$CUSTOMFIELDS$$
+            </div>
+          </div>
+        </ac:visibilityarea>
+      </div>
+      <div class="col-xs-6 no-m-b">
+        <div class="panel panel-default">
+          <div class="panel-heading">Shipping Details</div>
+          <div class="panel-body">
+            $$ORDERSHIPPINGMETHOD$$
+            $$ORDERSHIPPINGNOTICE$$
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+$$SPECIALINSTRUCTIONS$$
+-->
+    <ac:visibilityarea id="PublicCommentsContainer">
+      <div class="ReceiptText">
+        <b>$$PUBLICCOMMENTSHEADER$$</b><br>
+        $$PUBLICCOMMENTS$$
+      </div>
+    </ac:visibilityarea>
+    <ac:visibilityarea id="OrderInstructionsContainer">
+      <div class="ReceiptText">
+        <b>$$ORDERINSTRUCTIONSHEADER$$</b><br>
+        $$ORDERINSTRUCTIONS$$
+      </div>
+    </ac:visibilityarea>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">Order Details</div>
+      <div class="panel-body">
+        <table class="ReceiptItemTable table">
+          <ac:layoutarea id="ItemHeader">
+            <thead>
+              <tr class="ReceiptHeader">
+                <th align="left">Sku</th>
+                <th align="left">Item Description</th>
+                <th>QTY</th>
+                <ac:visibilityarea id="ItemPricingHeader">
+                  <th>Price</th>
+                  <th>Total</th>
+                </ac:visibilityarea>
+              </tr>
+            </thead>
+          </ac:layoutarea>
+          <ac:layoutarea id="ItemDetail">
+            <tr class="ReceiptItem">
+              <td><div class="OrderDetailsItemNr">$$ITEMNUMBER$$</div></td>
+              <td><span class="OrderDetailsItemName">$$ITEMNAME$$</span>
+                $$VARIATIONINFO$$
+                $$CUSTOMIZATIONINFO$$
+                $$CARTITEMADDRESS$$
+                $$CARTITEMSHIPPINGMETHOD$$
+              </td>
+              <td align="center"><div class="OrderDetailsItemQuantity">$$ITEMQTY$$</div></td>
+              <ac:visibilityarea id="ItemTotalsContainer">
+                <td align="center" id="ItemPrice"><div class="OrderDetailsItemPrice">$$ITEMPRICE$$</div></td>
+                <td align="center" id="ItemTotal">$$ITEMTOTAL$$</td>
+              </ac:visibilityarea>
+            </tr>
+          </ac:layoutarea>
+          <ac:layoutarea id="ItemDetailAlt">
+            <tr class="ReceiptItemAlt">
+              <td><div class="OrderDetailsItemNr">$$ITEMNUMBER$$</div></td>
+              <td><span class="OrderDetailsItemName">$$ITEMNAME$$</span>
+                $$VARIATIONINFO$$
+                $$CUSTOMIZATIONINFO$$
+                $$CARTITEMADDRESS$$
+                $$CARTITEMSHIPPINGMETHOD$$
+              </td>
+              <td align="center"><div class="OrderDetailsItemQuantity">$$ITEMQTY$$</div></td>
+              <ac:visibilityarea id="ItemTotalsContainer">
+                <td align="center" id="ItemPrice"><div class="OrderDetailsItemPrice">$$ITEMPRICE$$</div></td>
+                <td align="center" id="ItemTotal">$$ITEMTOTAL$$</td>
+              </ac:visibilityarea>
+            </tr>
+            
+          </ac:layoutarea>
+          <ac:layoutarea id="ItemFooter"></ac:layoutarea>
+          
+          <ac:visibilityarea id="OrderTotalsContainer">
+            <tr>
+              <td colspan="4" align="right" class="OrderDetailsItemNr no-border">Subtotal</td>
+              <td align="center" class="OrderPricing no-border">$$ORDERSUBTOTAL$$</td>
+            </tr>
+            <tr>
+              <td colspan="4" align="right" class="OrderPricingText no-border">Shipping</td>
+              <td align="center" class="OrderPricing no-border">$$ORDERSHIPPINGAMT$$</td>
+            </tr>
+            <ac:visibilityarea id="HandlingRow">
+              <tr>
+                <td colspan="4" align="right" class="OrderPricingText no-border">Handling</td>
+                <td align="center" class="OrderPricing no-border">$$ORDERHANDLINGAMT$$</td>
+              </tr>
+            </ac:visibilityarea>
+            <ac:visibilityarea id="DiscountRow">
+              <tr>
+                <td colspan="4" align="right" class="OrderPricingText no-border">Discount:
+                  $$ORDERDISCOUNTDESC$$</td>
+                <td align="center" class="OrderPricing no-border">$$ORDERDISCOUNTAMT$$</td>
+              </tr>
+            </ac:visibilityarea>
+            <tr>
+              <td colspan="4" align="right" class="OrderPricingText no-border">Tax</td>
+              <td align="center" class="OrderPricing no-border">$$ORDERTAXAMT$$</td>
+            </tr>
+            <ac:visibilityarea id="AdditionalFeeRow">
+              <tr>
+                <td colspan="4" align="right" class="ViewOrderPricingText no-border">$$ORDERADDITIONALFEEDESC$$</td>
+                <td align="center" class="ViewOrderPricing" no-border="">$$ORDERADDITIONALFEEAMT$$</td>
+              </tr>
+            </ac:visibilityarea>
+            <tr class="OrderPricing">
+              <td colspan="4" align="right" class="OrderPricingText no-border">Total</td>
+              <td align="center" class="OrderPricing no-border">$$ORDERTOTAL$$</td>
+            </tr>
+          </ac:visibilityarea>
+        </table>
+        <ac:visibilityarea id="OrderGiftMessageContainer">
+          <div class="ReceiptText">
+            <b>$$INVOICEGIFTMESSAGEHEADER$$</b><br>
+            $$INVOICEGIFTMESSAGELABEL$$
+            $$GIFTMESSAGE$$
+          </div>
+        </ac:visibilityarea>
+      </div>
+    </div>
+    
+  </div>
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>

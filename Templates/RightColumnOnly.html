@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    <!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    $$HEADTAGS$$
+    <ac:templateoverridearea id="HeadTagsAddonArea"></ac:templateoverridearea>
+    <link rel="stylesheet" href="/Shared/Themes/Base/Templates/RightColumnOnly.css" type="text/css">
+  </head>
+<body class="RightColumn ##PAGEBODYCLASSES##" itemtype="http://schema.org/WebPage" itemscope="">
+    <div class="Layout container">
+      <header class="LayoutTop row">
+        <div class="col-sm-12">
+          $$HEADER$$
+        </div>
+      </header>
+      <ac:templateoverridearea id="HeaderAddonArea"></ac:templateoverridearea>
+      <section class="LayoutMiddle row">
+        <section class="LayoutContent col-sm-9">
+          <div class="LayoutContentInner">
+            $$PAGELAYOUT$$
+          </div>
+          <div style="clear:both"></div>
+        </section>
+        <aside class="LayoutRightColumn col-sm-3">
+          <div class="LayoutRightColumnInner">
+            <ac:templateoverridearea id="RightColumn">
+              $$RIGHTCOLUMN$$
+            </ac:templateoverridearea>
+          </div>
+        </aside>
+        
+      </section>
+      <footer class="LayoutBottom row">
+        <div class="col-sm-12">
+          $$FOOTER$$	
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

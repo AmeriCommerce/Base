@@ -1,0 +1,27 @@
+
+  <ac:visibilityarea id="LoggedOut">
+    $$HEADER$$
+    <div>
+      <label>$$USERNAMELABEL$$</label>
+      <div>$$USERNAMEINPUT$$</div>
+    </div>
+    <div class="m-20 no-m-lr">
+      <label>$$PASSWORDLABEL$$</label>
+      <div>$$PASSWORDINPUT$$</div>
+      <div class="size-small right">
+        <a href="/store/lostPassword.aspx">Forgot Password?</a>
+      </div>
+    </div>
+    <div>
+      <div class="right m-t-10">$$LOGINBUTTON$$</div>
+    </div>
+    <div class="right size-small">
+      or <a href="/store/register.aspx">Register an Account</a>
+    </div>
+    $$ERROR$$
+  </ac:visibilityarea>
+  <ac:visibilityarea id="LoggedIn">
+    Welcome <a href="/store/myaccount.aspx"><strong>##CUSTOMERFIRSTNAME##</strong></a>!<br>
+    <a href="/store/myaccount.aspx">My Account</a><br>
+    ##LOGINLOGOUTLINK##
+  </ac:visibilityarea>

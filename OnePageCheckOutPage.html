@@ -1,0 +1,1202 @@
+<ac:pagelayout id="OnePageCheckOutPage" showaddresserrorsinline="True" showvalidationinline="True">
+  
+  
+  <div class="h2 bold pad-t-10 pad-b-30 center">
+    Secure Checkout
+  </div>
+  
+  <ac:visibilityarea id="BackToPayPalArea">
+    <div>$$BACKTOPAYPALBUTTON$$</div>
+  </ac:visibilityarea>
+  
+  <div class="well checkout">
+    $$ERRORTEXT$$
+    <div class="row">
+      <div class="col-sm-9">
+        <ac:widgetarea id="Top">
+</ac:widgetarea>
+        
+        
+        <ac:visibilityarea id="ExistingCustomersArea">
+          <div class="panel">
+            <div class="pad-20">
+              <strong>Are you an existing Customer?</strong> &nbsp; &nbsp;<a href="/store/login.aspx" class="btn btn-default">Log In</a>
+            </div>
+          </div>
+        </ac:visibilityarea>
+        
+        <ac:layoutarea id="OnePageCheckoutBillingAddressArea">
+
+          <div class="panel">
+            <div class="pad-20 full-input">
+              <div class="h4 bold pad-b-20">
+                $$BILLINGINFOHEADER$$
+              </div>
+              
+              <ac:visibilityarea id="dvAddrBilling">
+                <ac:visibilityarea id="AddressSummaryArea">
+                  <p>$$ADDRESSSUMMARY$$</p>
+                </ac:visibilityarea>
+                <ac:visibilityarea id="AddressBookArea">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <label>
+                        $$ADDRESSLIST$$
+                        <span>Address Book:</span>
+                      </label>
+                    </div>
+                  </div>
+                </ac:visibilityarea>
+                <ac:visibilityarea id="AddressEditorArea">
+                  $$ADDRESSSCRIPT$$
+                  
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label>
+                        $$FIRSTNAMETEXTBOX$$
+                        $$FIRSTNAMEERROR$$
+                        <span>First Name</span>
+                      </label>
+                    </div>
+                    <div class="col-sm-6 no-m-b">
+                      <label>
+                        $$LASTNAMETEXTBOX$$
+                        $$LASTNAMEERROR$$
+                        <span>Last Name</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label>
+                        $$PHONENUMBERTEXTBOX$$
+                        $$PHONENUMBERERROR$$
+                        <span>$$PHONENUMBERLABEL$$ $$PHONENUMBERREQUIREDLABEL$$</span>
+                      </label>
+                      <ac:visibilityarea id="CustomerAltPhoneArea">
+                        <label>
+                          $$ALTPHONENUMBERTEXTBOX$$
+                          <span>$$ALTPHONENUMBERLABEL$$</span>
+                        </label>
+                        
+                      </ac:visibilityarea>
+                      <ac:visibilityarea id="CustomerFaxArea">
+                        <label>
+                          $$FAXTEXTBOX$$
+                          <span>$$FAXLABEL$$</span>
+                        </label>
+                      </ac:visibilityarea>
+                    </div>
+                    
+                    <ac:visibilityarea id="EmailAddressArea">
+                      <div class="col-sm-6 no-m-b">
+                        <label>
+                          $$EMAILADDRESSTEXTBOX$$
+                          $$EMAILADDRESSERROR$$
+                          <span>Email</span>
+                        </label>
+                      </div>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="ConfirmEmailAddressArea">
+                      <div class="col-sm-6 col-sm-push6">
+                        <label>
+                          $$CONFIRMEMAILTEXTBOX$$
+                          $$CONFIRMEMAILADDRESSERROR$$
+                          <span>Confirm Email</span>
+                        </label>
+                      </div>
+                    </ac:visibilityarea>
+                  </div>
+                  
+                  <ac:visibilityarea id="CompanyArea">
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <label>
+                          $$COMPANYTEXTBOX$$
+                          <span>$$COMPANYLABEL$$</span>
+                        </label>
+                      </div>
+                    </div>
+                  </ac:visibilityarea>
+                  <div class="row">
+                    <div class="col-sm-6 no-m-b">
+                      <label>
+                        $$ADDRESSLINE1TEXTBOX$$
+                        $$ADDRESSLINE1ERROR$$
+                        <span>$$ADDRESSLINE1LABEL$$<span class="RequiredField">*</span></span>
+                      </label>
+                    </div>
+                    <div class="col-sm-6 no-m-b">
+                      <label>
+                        $$ADDRESSLINE2TEXTBOX$$
+                        <span>$$ADDRESSLINE2LABEL$$</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <label>
+                        $$CITYTEXTBOX$$
+                        $$CITYERROR$$
+                        <span>$$CITYLABEL$$<span class="RequiredField">*</span></span>
+                      </label>
+                    </div>
+                    <div class="col-sm-3 no-m-b">
+                      
+                      <ac:visibilityarea id="NonUSStateArea">
+                        <label>
+                          $$NONUSSTATETEXTBOX$$
+                          $$NONUSSTATEERROR$$
+                          <span>$$NONUSSTATELABEL$$<span class="RequiredField">*</span></span>
+                        </label>
+                        
+                      </ac:visibilityarea>
+                      <ac:visibilityarea id="StateArea">
+                        <label>
+                          $$STATEDROPDOWN$$
+                          $$STATEERROR$$
+                          <span>$$STATELABEL$$<span class="RequiredField">*</span></span>
+                        </label>
+                        
+                      </ac:visibilityarea>
+                    </div>
+                    <div class="col-sm-3 zip-code">
+                      <div>
+                        <label>
+                          $$POSTALCODETEXTBOX$$
+                          $$POSTALCODEERROR$$
+                          <span>$$POSTALCODELABEL$$ $$POSTALCODEREQUIRED$$</span>
+                        </label>
+                      </div>
+                      <div>
+                        <label class="zip-plus4">
+                          <div>$$ZIP4TEXTBOX$$</div>
+                          <span>+4</span>
+                          $$ZIP4ERROR$$
+                        </label>
+                      </div>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                      <label>
+                        $$COUNTRYDROPDOWN$$
+                        <span>$$COUNTRYLABEL$$<span class="RequiredField">*</span></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-8">
+                      <label>
+                        $$ADDRESSNOTESTEXTBOX$$
+                        <span>$$ADDRESSNOTESLABEL$$</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-8">
+                      $$MAILINGLISTCHECKBOX$$
+                    </div>
+                  </div>
+                  
+                  <div class="row">
+                    $$BILLINGCUSTOMFIELDS$$
+                  </div>
+                  $$CUSTOMFIELDVALIDATIONERRORS$$
+                </ac:visibilityarea>
+                
+              </ac:visibilityarea>
+              <ac:visibilityarea id="AmazonEmailArea">
+                Email Address:$$AMAZONEMAILTEXTBOX$$ <br>
+              </ac:visibilityarea>
+              
+            </div>
+          </div>
+        </ac:layoutarea>
+        
+        <ac:layoutarea id="OnePageCheckoutBillingCustomFieldsArea">
+          <div class="col-sm-6">
+            <label>
+              $$CUSTOMFIELDCONTROL$$
+              <span>$$CUSTOMFIELDLABEL$$</span>
+            </label>
+          </div>
+        </ac:layoutarea>
+        
+        
+        <ac:visibilityarea id="RegistrationArea">
+
+          <div class="panel">
+            <div class="pad-20 full-input">
+              <div class="h4 bold pad-b-20">
+                $$ACCOUNTPASSWORDHEADER$$
+              </div>
+              <div>$$ACCOUNTPASSWORDTEXT$$</div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <label>
+                    $$PASSWORDTEXTBOX1$$
+                    <span>$$CHOOSEPASSWORDLABEL$$</span>
+                    $$PASSWORD1ERROR$$
+                  </label>
+                </div>
+                <div class="col-sm-6 no-m-b">
+                  <label>
+                    $$PASSWORDTEXTBOX2$$
+                    <span>$$REPEATPASSWORDLABEL$$</span>
+                    $$PASSWORD2ERROR$$
+                  </label>
+                </div>
+              </div>
+              $$CHECKOUTASGUESTCHECKBOX$$
+            </div>
+          </div>
+        </ac:visibilityarea>
+        
+        
+        <ac:layoutarea id="OnePageCheckoutShippingAddressArea">
+          
+
+          <ac:visibilityarea id="ShippingAddressArea">
+            <div class="panel full-input">
+              <div class="pad-20">
+                <div class="h4 bold pad-b-20">
+                  $$SHIPPINGINFORMATIONHEADER$$
+                </div>
+                <ac:visibilityarea id="dvAddrShipping">
+                  $$ADDRESSSCRIPT$$
+                  <ac:visibilityarea id="ShippingAddressEditorArea">
+                    
+                    <ac:visibilityarea id="ShippingAddressBookArea">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <label>
+                            $$ADDRESSLIST$$
+                            <span>Address Book</span>
+                          </label>
+                        </div>
+                      </div>
+                    </ac:visibilityarea>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label>
+                          $$FIRSTNAMETEXTBOX$$
+                          $$FIRSTNAMEERROR$$
+                          <span>First Name</span>
+                        </label>
+                      </div>
+                      <div class="col-sm-6 no-m-b">
+                        <label>
+                          $$LASTNAMETEXTBOX$$
+                          $$LASTNAMEERROR$$
+                          <span>Last Name</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label>
+                          $$PHONENUMBERTEXTBOX$$
+                          $$PHONENUMBERERROR$$
+                          <span>$$PHONENUMBERLABEL$$ $$PHONENUMBERREQUIREDLABEL$$</span>
+                        </label>
+                        <ac:visibilityarea id="ShippingCustomerAltPhoneArea">
+                          <label>
+                            $$ALTPHONENUMBERTEXTBOX$$
+                            <span>$$ALTPHONENUMBERLABEL$$</span>
+                          </label>
+                          
+                        </ac:visibilityarea>
+                        <ac:visibilityarea id="ShippingCustomerFaxArea">
+                          <label>
+                            $$FAXTEXTBOX$$
+                            <span>$$FAXLABEL$$</span>
+                          </label>
+                        </ac:visibilityarea>
+                      </div>
+                      
+                      <ac:visibilityarea id="ShippingEmailAddressArea">
+                        <div class="col-sm-6 no-m-b">
+                          <label>
+                            $$EMAILADDRESSTEXTBOX$$
+                            $$EMAILADDRESSERROR$$
+                            <span>Email</span>
+                          </label>
+                        </div>
+                      </ac:visibilityarea>
+                      <ac:visibilityarea id="ShippingConfirmEmailAddressArea">
+                        <div class="col-sm-6 col-sm-push6">
+                          <label>
+                            $$CONFIRMEMAILTEXTBOX$$
+                            $$CONFIRMEMAILADDRESSERROR$$
+                            <span>Confirm Email</span>
+                          </label>
+                        </div>
+                      </ac:visibilityarea>
+                    </div>
+                    
+                    <ac:visibilityarea id="ShippingCompanyArea">
+                      <div class="row">
+                        <div class="col-sm-8">
+                          <label>
+                            $$COMPANYTEXTBOX$$
+                            <span>$$COMPANYLABEL$$</span>
+                          </label>
+                        </div>
+                      </div>
+                    </ac:visibilityarea>
+                    <div class="row">
+                      <div class="col-sm-6 no-m-b">
+                        <label>
+                          $$ADDRESSLINE1TEXTBOX$$
+                          $$ADDRESSLINE1ERROR$$
+                          <span>$$ADDRESSLINE1LABEL$$<span class="RequiredField">*</span></span>
+                        </label>
+                      </div>
+                      <div class="col-sm-6 no-m-b">
+                        <label>
+                          $$ADDRESSLINE2TEXTBOX$$
+                          <span>$$ADDRESSLINE2LABEL$$</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label>
+                          $$CITYTEXTBOX$$
+                          $$CITYERROR$$
+                          <span>$$CITYLABEL$$<span class="RequiredField">*</span></span>
+                        </label>
+                      </div>
+                      <div class="col-sm-3 no-m-b">
+                        
+                        <ac:visibilityarea id="ShippingNonUSStateArea">
+                          <label>
+                            $$NONUSSTATETEXTBOX$$
+                            $$NONUSSTATEERROR$$
+                            <span>$$NONUSSTATELABEL$$<span class="RequiredField">*</span></span>
+                          </label>
+                          
+                        </ac:visibilityarea>
+                        <ac:visibilityarea id="ShippingStateArea">
+                          <label>
+                            $$STATEDROPDOWN$$
+                            $$STATEERROR$$
+                            <span>$$STATELABEL$$<span class="RequiredField">*</span></span>
+                          </label>
+                          
+                        </ac:visibilityarea>
+                      </div>
+                      <div class="col-sm-3 zip-code">
+                        <div>
+                          <label>
+                            $$POSTALCODETEXTBOX$$
+                            $$POSTALCODEERROR$$
+                            <span>$$POSTALCODELABEL$$ $$POSTALCODEREQUIRED$$</span>
+                          </label>
+                        </div>
+                        <div>
+                          <label class="zip-plus4">
+                            <div>$$ZIP4TEXTBOX$$</div>
+                            <span>+4</span>
+                            $$ZIP4ERROR$$
+                          </label>
+                        </div>
+                      </div>
+                      
+                      <div class="col-sm-3">
+                        <label>
+                          $$COUNTRYDROPDOWN$$
+                          <span>$$COUNTRYLABEL$$<span class="RequiredField">*</span></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8">
+                        <label>
+                          $$ADDRESSNOTESTEXTBOX$$
+                          <span>$$ADDRESSNOTESLABEL$$</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-8">
+                        $$MAILINGLISTCHECKBOX$$
+                      </div>
+                    </div>
+                    
+                    <div class="row">
+                      $$SHIPPINGCUSTOMFIELDS$$
+                    </div>
+                    
+                    
+                    $$CUSTOMFIELDVALIDATIONERRORS$$
+                  </ac:visibilityarea>
+                  
+                  
+                  
+                </ac:visibilityarea>
+                $$BILLINGANDSHIPPINGINFOSAMERADIOBUTTONS$$   
+                $$SHIPPINGINFORMATIONFOOTER$$
+                
+              </div>
+            </div>
+          </ac:visibilityarea>
+        </ac:layoutarea>
+        <ac:layoutarea id="OnePageCheckoutShippingCustomFieldsArea">
+          <div class="col-sm-6">
+            <label>
+              $$CUSTOMFIELDCONTROL$$
+              <span>$$CUSTOMFIELDLABEL$$</span>
+            </label>
+          </div>
+        </ac:layoutarea>
+        
+
+        <ac:visibilityarea id="CustomerCustomFieldsArea">
+          <div class="panel">
+            <div class="pad-20">
+              <div class="h4 bold">
+                $$CUSTOMERCUSTOMFIELDSHEADER$$
+              </div>
+              <div class="row full-input custom-fields">
+                
+                <ac:layoutarea id="OnePageCheckoutCustomerCustomFieldsArea">
+                  <div class="col-sm-6 no-m-b field">
+                    <label>
+                      
+                      $$CUSTOMFIELDCONTROL$$
+                      <span>$$CUSTOMFIELDLABEL$$</span>
+                      $$CUSTOMFIELDERROR$$
+                    </label>
+                  </div>
+                </ac:layoutarea>
+              </div>
+              $$CUSTOMERCUSTOMFIELDVALIDATIONERRORS$$
+            </div>
+          </div>
+        </ac:visibilityarea>
+        
+        <ac:visibilityarea id="OrderCustomFieldsArea">
+          <div class="panel">
+            <div class="pad-20">
+              <div class="h4 bold">
+                $$ORDERCUSTOMFIELDSHEADER$$
+              </div>
+              <div class="row full-input custom-fields">
+                
+                <ac:layoutarea id="OnePageCheckoutOrderCustomFieldsArea">
+                  <div class="col-sm-6 no-m-b field">
+                    <label>
+                      
+                      $$CUSTOMFIELDCONTROL$$
+                      <span>$$CUSTOMFIELDLABEL$$</span>
+                      $$CUSTOMFIELDERROR$$
+                    </label>
+                  </div>
+                </ac:layoutarea>
+              </div>
+              $$ORDERCUSTOMFIELDVALIDATIONERRORS$$
+            </div>
+          </div>
+        </ac:visibilityarea>
+        
+
+        <ac:layoutarea id="OnePageCheckoutShippingArea">
+          <ac:visibilityarea id="ShippingMethodArea">
+            <div class="panel">
+              <div class="pad-20">
+                <div class="h4 bold pad-b-20">
+                  $$SHIPPINGMETHODHEADER$$
+                </div>
+                <ac:visibilityarea id="ShippingDropDownArea">
+                  <div class="ShippingDropDownArea">
+                    $$UPDATEPROGRESS$$
+                    $$SHIPPINGMETHODDROPDOWN$$
+                    $$SHIPPINGMETHODRADIOBUTTONS$$
+                    $$SHIPPINGMESSAGE$$
+                    $$CARTSHIPPINGERRORS$$                
+                    <div>
+                      $$RECALCULATESHIPPINGBUTTON$$
+                      $$ADDITIONALSHIPPINGINFORMATION$$
+                    </div>
+                  </div>
+                </ac:visibilityarea>
+                <ac:visibilityarea id="MultipleShippingAddressesArea">
+                  <div class="MultipleShippingAddressessArea">
+                    $$MULTIPLESHIPPINGADDRESSESTEXT$$
+                  </div>
+                </ac:visibilityarea>
+              </div>
+            </div>
+          </ac:visibilityarea>
+        </ac:layoutarea>
+        
+        <ac:visibilityarea id="PaymentMethodArea">
+          <ac:layoutarea id="OnePageCheckoutPaymentArea">
+
+            
+            <!--[ac] this section will be hidden on the front end to allow for the expandable payment sections -->
+            <div class="panel payment-method-select">
+              <div class="pad-20">
+                <div class="h4 bold pad-b-20">
+                  $$PAYMENTINFORMATIONHEADER$$
+                </div>
+                <ac:visibilityarea id="PaymentTypeArea">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label class="payment-select">
+                        $$PAYMENTMETHODDROPDOWN$$
+                        <span>$$PAYMENTMETHODTEXT$$</span>
+                      </label>
+                    </div>
+                  </div>
+                </ac:visibilityarea>
+              </div>
+            </div>
+            
+            <div class="payment-method CreditCard hide">
+
+              <div class="panel">
+                <div class="pad-20">
+                  <div data-payment-name="CreditCard" class="payment-name h4 bold">
+                    Credit Card
+                  </div>
+                  <ac:visibilityarea id="CreditCardArea">
+                    <div class="credit-card full-input pad-t-20">
+                      <ac:visibilityarea id="SavedCardsArea">
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <label>
+                              $$SAVEDCARDSDROPDOWN$$
+                              <span>$$SAVEDCARDSTEXT$$</span></label>
+                          </div>
+                        </div>
+                      </ac:visibilityarea>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label>
+                            $$CREDITCARDTYPEDROPDOWN$$
+                            <span>$$CARDTYPELABEL$$</span>
+                            $$CARDTYPEERROR$$
+                          </label>
+                        </div>
+                      </div>
+                      <ac:visibilityarea id="CreditCardNumberArea">
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <label>
+                              $$CARDNUMBERTEXTBOX$$
+                              <span>$$CARDNUMBERLABEL$$</span>
+                              $$CARDNUMBERERROR$$
+                            </label>
+                          </div>
+                        </div>
+                      </ac:visibilityarea>
+                      <div class="row">
+                        <div class="col-sm-8">
+                          <label>
+                            $$NAMEONCARDTEXTBOX$$
+                            <span>$$NAMEONCARDLABEL$$</span>
+                            $$NAMEONCARDERROR$$
+                          </label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-3">
+                          <label>
+                            $$CVVTEXTBOX$$
+                            
+                            <span>$$CVVNUMBERLABEL$$ <em class="size-small">$$EXPLAINCVVLINK$$</em></span>
+                            $$CVVERROR$$
+                          </label>
+                          
+                        </div>
+                        
+                        <div class="col-sm-5">
+                          <label class="col-xs-5">
+                            $$EXPIRATIONMONTHDROPDOWN$$
+                            <span class="no-wrap">$$EXPIRATIONDATELABEL$$</span>
+                          </label>
+                          <label class="col-xs-2 no-m-b center size-big">/</label>
+                          <label class="col-xs-5">
+                            $$EXPIRATIONYEARDROPDOWN$$
+                          </label>
+                          <label>$$EXPIRATIONERROR$$</label>
+                        </div>
+                      </div>
+                      
+                    </div>
+                    <ac:visibilityarea id="CreditCardPartialPaymentsShowHideArea">
+                      <div class="pad-t-20">
+                        $$SPLITPAYMENTLINK$$
+                        <div class="row" id="trCreditCardPartialPaymentArea" style="display:none">
+                          <div class="col-sm-6">
+                            <label class="full-input">
+                              $$CREDITCARDAMOUNTTOAPPLY$$ &nbsp; 
+                              <span>$$AMOUNTTOAPPLYLABEL$$</span>
+                            </label>
+                            $$APPLYCREDITCARDPAYMENTBUTTON$$
+                          </div>
+                        </div>
+                      </div>
+                    </ac:visibilityarea>
+                    
+                    
+                  </ac:visibilityarea>
+                </div>
+              </div>
+            </div>
+            <div class="payment-method Echeck hide">
+
+              <div class="panel pad-20">
+                <div data-payment-name="Echeck" class="payment-name h4 bold">
+                  Echeck
+                </div>
+                <ac:visibilityarea id="EcheckArea">
+                  <div class="full-input">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label>
+                          $$ECHECKFIRSTNAMETEXTBOX$$
+                          <span>$$ECHECKFIRSTNAMELABEL$$</span>
+                          $$ECHECKFIRSTNAMEERROR$$
+                        </label>
+                      </div>
+                      <div class="col-sm-6 no-m-b">
+                        <label>
+                          $$ECHECKLASTNAMETEXTBOX$$
+                          <span>$$ECHECKLASTNAMELABEL$$</span>
+                          $$ECHECKLASTNAMEERROR$$
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <label>
+                          $$ECHECKDRIVERSLICENSETEXTBOX$$
+                          <span>$$ECHECKDRIVERSLICENSELABEL$$</span>
+                          $$ECHECKDRIVERSLICENSEERROR$$
+                        </label>
+                      </div>
+                      <div class="col-sm-3 no-m-b">
+                        <label>
+                          $$ECHECKDRIVERSLICENSESTATETEXTBOX$$
+                          <span>$$ECHECKDRIVERSLICENSESTATELABEL$$</span>
+                          $$ECHECKDRIVERSLICENSESTATEERROR$$
+                        </label>
+                      </div>
+                      <div class="col-sm-3 no-m-b">
+                        <label>
+                          $$ECHECKDBOTEXTBOX$$
+                          <span>$$ECHECKDOBLABEL$$</span>
+                          $$ECHECKDOBERROR$$
+                        </label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-2">
+                        <label>
+                          $$ECHECKNUMBERTEXTBOX$$
+                          <span>Check #</span>
+                          $$ECHECKNUMBERERROR$$
+                        </label>
+                      </div>
+                      <div class="col-sm-4">
+                        <label>
+                          $$ECHECKBANKNAMETEXTBOX$$
+                          <span>$$ECHECKBANKNAMELABEL$$</span>
+                          $$ECHECKBANKNAMEERROR$$
+                        </label>
+                      </div>
+                      <div class="col-sm-3 no-m-b">
+                        <label>
+                          $$ECHECKBANKACCOUNTNUMBERTEXTBOX$$
+                          <span>$$ECHECKBANKACCOUNTNUMBERLABEL$$</span>
+                          $$ECHECKBANKACCOUNTNUMBERERROR$$
+                        </label>
+                      </div>
+                      <div class="col-sm-3 no-m-b">
+                        <label>
+                          $$ECHECKBANKROUTINGNUMBERTEXTBOX$$
+                          <span>$$ECHECKBANKROUTINGNUMBERLABEL$$</span>
+                          $$ECHECKBANKROUTINGNUMBERERROR$$
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </ac:visibilityarea>
+              </div>
+            </div>
+            <div class="payment-method PayPalExpress hide">
+              <div class="panel pad-20">
+                <div data-payment-name="PayPalExpress" class="payment-name h4 bold">
+                  <span>PayPal</span>Express
+                </div>
+                <ac:visibilityarea id="ExpressCheckoutArea">
+                  <div class="pad-t-20">
+                    $$EXPRESSCHECKOUTIMAGE$$
+                    $$EXPRESSCHECKOUTTEXT$$
+                    <p>
+                      You will be taken to PayPal to complete payment once you have placed your order.
+                    </p>
+                  </div>
+                </ac:visibilityarea>
+              </div>
+            </div>
+            <div class="payment-method PayPal hide">
+              <div class="panel pad-20">
+                <div data-payment-name="PayPal" class="payment-name h4 bold">
+                  <span>PayPal</span>
+                </div>
+                <div class="pad-t-20 paypal-text">
+                  $$EXPRESSCHECKOUTIMAGE$$
+                  $$EXPRESSCHECKOUTTEXT$$
+                  <p>
+                    You will be taken to PayPal to complete payment once you have placed your order.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="payment-method GiftCard hide">
+              <div class="panel pad-20">
+                <div data-payment-name="GiftCard" class="payment-name h4 bold">
+                  Gift Card
+                </div>
+                <ac:visibilityarea id="GiftCardArea">
+                  <table>
+                    <tr>
+                      <td class="CheckOutText" width="100px">Gift Card Number:</td>
+                      <td>$$GIFTCARDTEXTBOX$$</td>
+                    </tr>
+                    <tr>
+                      <td class="CheckOutText" width="100px">Gift Card Name:</td>
+                      <td>$$GIFTCARDNAME$$</td>
+                    </tr>
+                    <tr>
+                      <td class="CheckOutText" width="100px">Gift Card CVV:</td>
+                      <td>$$GIFTCARDCVV$$</td>
+                    </tr>
+                  </table>
+                </ac:visibilityarea>
+              </div>
+            </div>
+            <div class="payment-method RewardPoints hide">
+              <div class="panel pad-20">
+                <div data-payment-name="RewardPoints" class="payment-name h4 bold">
+                  Reward ##REWARDPOINTSLABEL##
+                </div>
+                <ac:visibilityarea id="ActiveRewardPointsArea">
+                  <div class="row pad-t-20">
+                    <div class="col-sm-12">
+                      Available ##REWARDPOINTSLABEL##: $$ACTIVEPOINTSLABEL$$
+                    </div>
+                    <div class="col-sm-3">
+                      <label class="full-input">
+                        $$POINTSTOAPPLYTEXTBOX$$
+                        <span>##REWARDPOINTSLABEL## to Apply</span>
+                        $$REWARDSERROR$$
+                      </label>
+                    </div>
+                    <div class="col-sm-2 pad-t-20">
+                      $$APPLYPOINTSBUTTON$$
+                    </div>
+                  </div>
+                  
+                </ac:visibilityarea>
+              </div>
+            </div>
+            <div class="payment-method GiftCertificate hide">
+              <div class="panel pad-20">
+                <div data-payment-name="GiftCertificate" class="payment-name h4 bold">
+                  Gift Certificate
+                </div>
+                
+                <ac:visibilityarea id="ExistingGiftCertificatesArea">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label>
+                        
+                        $$EXISTINGGIFTCERTIFICATESDROPDOWN$$
+                        <span>$$EXISTINGGIFTCERTIFICATESLABEL$$</span>
+                      </label>
+                      $$USEGIFTCERTIFICATEBUTTON$$
+                    </div>
+                  </div>
+                </ac:visibilityarea>
+                <ac:visibilityarea id="GiftCertificatesArea">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label class="full-input">
+                        $$ADDGIFTCERTIFICATETEXTBOX$$
+                        <span>$$ADDGIFTCERTIFICATELABEL$$</span>
+                        <ac:visibilityarea id="litInvalidGiftCertificate">
+                          <div class="ErrorText alert alert-danger">$$INVALIDGIFTCERTIFICATETEXT$$</div>
+                        </ac:visibilityarea>
+                      </label>
+                      <label class="image-input-replace">
+                        <a class="btn btn-default">Apply Gift Certificate</a>
+                        $$ADDGIFTCERTIFICATEBUTTON$$
+                      </label>
+                    </div>
+                  </div>
+                  <div>
+                    $$APPLIEDGIFTCERTIFICATES$$
+                  </div>
+                  <ac:visibilityarea id="BalanceAfterGiftCertificatesArea">
+                    <div>
+                      $$BALANCEAFTERGIFTCERTSLABEL$$
+                    </div>
+                  </ac:visibilityarea>
+                </ac:visibilityarea>
+              </div>
+            </div>
+            
+            <div class="CustomPayments Custom hide">
+              <div class="ActiveCustomPayment hide">
+                <!--[ac] This section is populated by the OnePageCheckoutCustomPaymentMethodsArea layoutarea below -->
+                $$CUSTOMPAYMENTMETHODS$$
+              </div>
+            </div>
+            
+            <!--[ac] This section is shown if there is no payment due based on the order total being 0 or if payments have been applied that cover the entire balance -->
+            <div class="NoPaymentDue hide">
+              <div class="panel pad-20">
+                <div class="h4 bold">
+                  $$PAYMENTINFORMATIONHEADER$$
+                </div>
+                <div class="h5 pad-t-10">No Payment Due</div>
+              </div>
+            </div>
+            $$PAYMENTERRORMESSAGE$$
+            
+            <ac:visibilityarea id="AppliedPaymentsListArea">
+              <div class="panel pad-20">
+                <div class="h4 bold pad-b-20">
+                  Applied Payments
+                </div>
+                <table class="table">
+                  $$APPLIEDPAYMENTSLIST$$
+                </table>
+              </div>
+            </ac:visibilityarea>
+            
+            
+
+            <ac:visibilityarea id="CouponCodeArea">
+              <div class="panel">
+                <div class="pad-20">
+                  <div class="h4 bold">
+                    Discounts
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <label class="full-input">
+                        
+                        $$COUPONCODETEXTBOX$$
+                        $$COUPONCODELABEL$$
+                      </label>
+                    </div>
+                    <div class="col-sm-2 pad-t-20">
+                      
+                      <div>
+                        $$ADDCOUPONCODEBUTTON$$
+                      </div>
+                    </div>
+                    <div>
+                      $$COUPONCODEERROR$$
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ac:visibilityarea>
+            
+          </ac:layoutarea>
+        </ac:visibilityarea>
+        
+        <!--[ac] The following layoutareas are rendered via the $$APPLIEDPAYMENTSLIST$$ merge code above -->
+        <ac:layoutarea id="OnePageCheckoutAppliedPayment">
+          <tr>
+            <td>$$PAYMENTNAME$$</td>
+            <td>$$PAYMENTADDITIONALINFO$$</td>
+            <td>$$PAYMENTAMOUNT$$</td>
+            <td class="right">
+              <label class="remove-payment">
+                <a>Remove Payment</a>
+                $$REMOVEPAYMENTBUTTON$$
+              </label>
+            </td>
+          </tr>
+        </ac:layoutarea>
+        <ac:layoutarea id="OnePageCheckoutAppliedPaymentAlt">
+          <tr>
+            <td>$$PAYMENTNAME$$</td>
+            <td>$$PAYMENTADDITIONALINFO$$</td>
+            <td>$$PAYMENTAMOUNT$$</td>
+            <td class="right">
+              <label class="remove-payment">
+                <a>Remove Payment</a>
+                $$REMOVEPAYMENTBUTTON$$
+              </label>
+            </td>
+          </tr>
+        </ac:layoutarea>
+        
+        
+        $$AMAZONWALLET$$
+        
+        <ac:layoutarea id="OnePageCheckoutCustomPaymentMethodsArea">
+          <div class="pad-t-20 CustomPayment">
+            <div class="hide">$$PAYMENTTYPENAME$$</div>
+            <span class="CheckoutText">
+              $$PAYMENTMETHODDESCRIPTION$$
+            </span>
+            <!--[ac] This section is populated by the OnePageCheckoutCustomPaymentMethodField layoutarea below -->
+            $$CUSTOMPAYMENTMETHODID$$
+            
+            $$FIELDSLIST$$
+          </div>
+        </ac:layoutarea>
+        <ac:layoutarea id="OnePageCheckoutCustomPaymentMethodField">
+          <label>
+            $$FIELDCONTROL$$
+            <span>$$FIELDNAME$$</span>
+          </label>
+        </ac:layoutarea>
+        
+        
+        <ac:layoutarea id="OnePageCheckoutAppliedGiftCertificatesArea">
+          <div>
+            $$GIFTCERTIFICATECODE$$ : 
+            $$GIFTCERTIFICATEAMOUNT$$
+            $$REMOVEGIFTCERTIFICATEBUTTON$$
+          </div>
+        </ac:layoutarea>
+        
+        
+        
+        
+        
+        
+        
+
+        <div class="row">
+          <ac:visibilityarea id="PublicOrderCommentsArea">
+            <div class="col-sm-6">
+              <div class="panel">
+                <div class="pad-20">
+                  <div class="h4 bold">
+                    $$ORDERCOMMENTSHEADER$$
+                  </div>
+                  <div class="full-input">
+                    <label>
+                      $$PUBLICORDERCOMMENTSTEXTBOX$$
+                      <span>Comments</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ac:visibilityarea>
+          <ac:layoutarea id="OnePageCheckoutGiftArea">
+            <ac:visibilityarea id="OrderGiftingArea">
+              <div class="col-sm-6">
+                <div class="panel">
+                  <div class="pad-20">
+                    <div class="h4 bold pad-b-20">
+                      $$GIFTHEADER$$
+                    </div>
+                    <div align="left">
+                      $$ISGIFTCHECKBOX$$ $$ISGIFTTEXT$$<br>
+                    </div>
+                    <ac:visibilityarea id="GiftMessageArea">
+                      <div class="full-input GiftMessageArea">
+                        <label>
+                          $$GIFTMESSAGETEXTBOX$$
+                          <span>$$GIFTMESSAGETEXT$$</span>
+                        </label>
+                      </div>
+                    </ac:visibilityarea>
+                  </div>
+                </div>
+              </div>
+            </ac:visibilityarea>
+          </ac:layoutarea>
+        </div>
+
+        <ac:visibilityarea id="MailingListsArea">
+          <div class="panel pad-20">
+            <div class="h4 bold pad-b-20">
+              $$MAILINGLISTSHEADER$$
+            </div>
+            <br>
+            $$MAILINGLISTSTEXT$$
+            <ac:layoutarea id="OnePageCheckoutMailingListArea">
+              <div>
+                $$MAILINGLISTID$$
+                $$SUBSCRIBECHECKBOX$$
+                $$MAILINGLISTNAME$$
+              </div>
+            </ac:layoutarea>
+          </div>
+        </ac:visibilityarea>
+        
+        
+
+        <div class="panel pad-20">
+          <div class="f-right"><a href="/store/shopcart.aspx">Edit Cart</a></div>
+          <div class="h4 bold pad-b-20">$$CONFIRMORDERTEXT$$</div>
+          <ac:layoutarea id="OnePageCheckOutCartArea">
+            <table width="100%" class="table ShoppingCart OnePageCheckoutShoppingCart">
+              <thead>
+                <tr>
+                  <th class="ShoppingCartHeader">Product Description</th>
+                  <th class="ShoppingCartHeader ShoppingCartHeaderText">Qty</th>
+                  <th class="ShoppingCartHeader ShoppingCartHeaderText">Each</th>
+                  <th class="ShoppingCartHeader ShoppingCartHeaderText">Total</th>
+                </tr>
+              </thead>
+              $$CARTITEMS$$  
+              
+            </table>
+            
+            <div class="hide">
+<!--[ac]
+This area gets dynamically pulled to the right column and "floats" with the page.
+
+-->
+              <div class="col-xs-6 col-xs-push-6 col-sm-4 col-sm-push-8">
+                <div class="main-totals-area pad-20">
+                  <table style="width:100%;border:0;padding:0;">
+                    <tr id="trSubtotal">
+                      <td class="ShoppingCartTotals">$$SUBTOTALTEXT$$</td>
+                      <td class="ShoppingCartPrice">$$SUBTOTAL$$</td>
+                    </tr>
+                    <ac:visibilityarea id="PointsEarnedArea">
+                      <tr id="trPointsEarned">
+                        <td class="ShoppingCartTotals">##REWARDPOINTSLABEL## Earned</td>
+                        <td class="ShoppingCartPrice">$$REWARDPOINTSEARNED$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="ShippingArea">
+                      <tr id="trShipping">
+                        <td class="ShoppingCartTotals">
+                          $$SHIPPINGTEXT$$
+                          $$SHIPPINGINFO$$
+                        </td>
+                        <td class="ShoppingCartPrice">$$SHIPPING$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="HandlingArea">
+                      <tr id="trHandling">
+                        <td class="ShoppingCartTotals">$$HANDLINGTEXT$$</td>
+                        <td class="ShoppingCartPrice">$$HANDLING$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="DiscountArea">
+                      <tr id="trDiscount">
+                        <td class="ShoppingCartTotals">
+                          <a>$$DISCOUNTTEXT$$
+                            $$DISCOUNTINFO$$
+                          </a>
+                        </td>
+                        <td class="ShoppingCartPrice"><a>$$DISCOUNT$$</a></td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="TaxArea">
+                      <tr id="trTax">
+                        <td class="ShoppingCartTotals">$$TAXTEXT$$</td>
+                        <td class="ShoppingCartPrice">$$TAX$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="AdditionalFeesArea">
+                      <tr id="trAdditionalFees">
+                        <td class="ShoppingCartTotals">$$ADDITIONALFEESTEXT$$</td>
+                        <td class="ShoppingCartPrice">$$ADDITIONALFEES$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="TotalInPointsArea">
+                      <tr id="trTotalInPoints">
+                        <td class="ShoppingCartTotals"><b>Total in ##REWARDPOINTSLABEL##</b></td>
+                        <td class="ShoppingCartPrice">$$TOTALINPOINTS$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="TotalArea">
+                      <tr id="trTotal">
+                        <td class="ShoppingCartTotals">$$TOTALTEXT$$</td>
+                        <td class="ShoppingCartPrice">$$TOTAL$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="AppliedPointsArea">
+                      <tr id="trAppliedPointsTotal">
+                        <td class="ShoppingCartTotals"><b>Applied ##REWARDPOINTSLABEL##</b></td>
+                        <td class="ShoppingCartPrice">$$APPLIEDPOINTSTOTAL$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="AppliedPaymentsArea">
+                      <tr id="trAppliedPaymentsTotal">
+                        <td class="ShoppingCartTotals"><b>Applied Payments</b></td>
+                        <td class="ShoppingCartPrice">$$APPLIEDPAYMENTSTOTAL$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                    <ac:visibilityarea id="AdjustedTotalArea">
+                      <tr id="trAdjustedTotal">
+                        <td class="ShoppingCartTotals"><b>Adjusted Total</b></td>
+                        <td class="ShoppingCartPrice">$$ADJUSTEDTOTAL$$</td>
+                      </tr>
+                    </ac:visibilityarea>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ac:layoutarea>
+          <ac:layoutarea id="OnePageCheckOutItem">
+            <!--[ac]
+#####                         ###                     
+#     #   ##   #####  #####     #  ##### ###### #    # 
+#        #  #  #    #   #       #    #   #      ##  ## 
+#       #    # #    #   #       #    #   #####  # ## # 
+#       ###### #####    #       #    #   #      #    # 
+#     # #    # #   #    #       #    #   #      #    # 
+#####  #    # #    #   #      ###   #   ###### #    # 
+
+-->
+            <tr>
+              <td>
+                $$ITEMNAME$$
+                $$ITEMNR$$
+                $$VARIANTS$$
+                $$PERSONALIZE$$
+              </td>
+              <td align="center">$$QUANTITY$$</td>
+              <td align="center">$$PRICE$$</td>
+              <td align="center">$$SUBTOTAL$$</td>
+            </tr>
+          </ac:layoutarea>
+          <div>$$UPDATECARTLINK$$</div>
+          <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="floating-totals">
+          <div class="panel pad-20">
+            <div class="h4 bold">
+              Order Summary
+            </div>
+            <hr>
+            <div class="side-totals-area">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-9 right">
+        $$PLACEORDERBUTTON$$
+      </div>
+    </div>
+  </div>
+  
+  ##INCLUDESCRIPTBOTTOM[##THEMEDIR##js/checkout.js]##
+  
+  
+</ac:pagelayout>

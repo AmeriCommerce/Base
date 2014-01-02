@@ -1,0 +1,202 @@
+<ac:templateoverridearea id="LeftColumn">
+  <ac:widgetarea id="SearchLeftTop">
+</ac:widgetarea>
+  $$LEFTCOLUMN$$
+  <ac:widgetarea id="SearchLeftBottom">
+</ac:widgetarea>
+</ac:templateoverridearea>
+<ac:templateoverridearea id="RightColumn">
+  <ac:widgetarea id="SearchRightTop">
+</ac:widgetarea>
+  $$RIGHTCOLUMN$$
+  <ac:widgetarea id="SearchRightBottom">
+</ac:widgetarea>
+</ac:templateoverridearea>
+<ac:pagelayout id="SearchPage" resizeproductthumb="True" productpicwidth="" productsperrow="4" sizeproportionally="True" layoutstyle="Horizontal" pagingtype="NumberedPageLinks" productpicheight="250" displaysortbox="True" pagesize="12">
+  <ac:widgetarea id="Top">
+</ac:widgetarea>
+  <div class="breadcrumb">
+    <a href="/">Home</a> &gt; Search Results
+  </div>
+  <div class="page-header"><h1 class="CategoryCategoryName">Search Results for <small>"$$SEARCHSTRING$$"</small></h1></div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      $$SEARCHBOX$$
+      $$SEARCHTYPE$$
+      $$SEARCHBUTTON$$
+      <div id="dvSearchOptions">
+        <ac:visibilityarea id="AdvancedSearchArea">
+          <div id="dvAdvancedSearch">
+            Only search in: $$ADVANCEDSEARCHDROPDOWN$$
+          </div>
+        </ac:visibilityarea>
+      </div>
+    </div>
+  </div>
+  
+  <ac:layoutarea id="ManufacturerList">
+    $$MANUFACTURERLINK$$
+  </ac:layoutarea>
+  
+  <ac:layoutarea id="CategoryList">
+    $$CATEGORYLINK$$
+  </ac:layoutarea>
+  
+  <ac:layoutarea id="CMSPageList">
+    <div class="CMSPage">
+      <div class="CMSPageTitleLine"><a href="$$CMSPAGEURL$$"><span class="CMSPageTitle">$$CMSPAGETITLE$$</span></a> <span class="CMSSearchRelevance">$$CMSRELEVANCE$$% Match</span></div>
+      <div class="CMSPageDescription">$$CMSSUMMARY$$</div>
+    </div>
+  </ac:layoutarea>
+  
+  <ac:layoutarea id="BlogPostList">
+    <div class="CMSPage">
+      <div class="CMSPageTitleLine"><a href="$$BLOGPOSTURL$$"><span class="CMSPageTitle">$$BLOGPOSTTITLE$$</span></a> <span class="CMSSearchRelevance">$$BLOGPOSTRELEVANCE$$% Match</span></div>
+      <div class="CMSPageDescription">$$BLOGPOSTSUMMARY$$</div>
+    </div>
+  </ac:layoutarea>
+  
+  <ac:layoutarea id="BlogList">
+    <div class="Blog">
+      <div class="BlogTitleLine"><a href="$$BLOGURL$$"><span class="BlogTitle">$$BLOGTITLE$$</span></a></div>
+      <div class="BlogPostDescription">$$BLOGDESCRIPTION$$</div>
+    </div>
+  </ac:layoutarea>
+  
+  
+  <div style="clear:both"></div>
+  <ac:visibilityarea id="TopNavigationArea">
+    <div class="clearfix pad-20 no-pad-lr">
+      <div class="in-block v-mid pad-r-20 pad-t-5">$$PRODUCTCOUNTTOP$$</div>
+      <div class="in-block v-mid pad-r-20">$$SORTBYDROPDOWN$$</div>
+      <div class="in-block v-mid pad-r-20">$$NUMBERPERPAGEDROPDOWNLABEL$$ $$SHOWBYPAGESIZE$$</div>    
+      
+      <div class="f-right">
+        <div class="btn-group">
+          <!--<button class="btn btn-default layout-grid icon-th size-big"></button>-->
+          <button title="Switch Product Layout" class="btn btn-default layout-list icon-align-justify size-big"></button>
+        </div>
+      </div>
+    </div>    
+  </ac:visibilityarea>
+  
+  <ac:layoutarea id="ProductListLayout">
+    <div class="product-list">$$GROUP$$</div>
+  </ac:layoutarea>
+  <ac:layoutarea id="ProductListGroup">
+    <div class="row">$$ITEM$$</div>
+  </ac:layoutarea>
+  <ac:layoutarea id="ProductList">
+    <div class="col-md-3 col-sm-6 m-30 m-b-only category-product grid-view">
+      <a href="##ITEMURL##" class="thumbnail no-overflow rel">
+        <button class="btn btn-default quick-view abs" data-href="##ITEMURL##?previewlayoutname=Product%20Quick%20View" data-title="##ITEMNAME## - ##ITEMNR##">Quick View</button>
+        $$THUMBNAIL$$
+        <ac:visibilityarea id="Featured">
+          <div class="abs product-flag left top featured"><span>Featured!</span></div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="Spotlight">
+          <div class="abs product-flag left bottom spotlight"><span>Spotlight!</span></div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="Flag1">
+          <div class="abs product-flag right top flag1"><span>New!</span></div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="Flag2">
+          <div class="abs product-flag right bottom flag2"><span>Hot!</span></div>
+        </ac:visibilityarea>
+        <ac:visibilityarea id="Flag3">
+          <div class="abs product-flag right bottom flag3"><span>Sale!</span></div>
+        </ac:visibilityarea>
+        
+      </a>
+      <div class="caption center lh-15">
+        <div class="f-right list-view-only">
+          
+          
+          <ac:visibilityarea id="AddToCartArea">
+            <div class="CategoryProductAddToCart">
+              <div style="width:90px;" class="full-input in-block">$$QUANTITYBOX$$</div>
+              $$ADDTOCARTBUTTON$$
+            </div>
+          </ac:visibilityarea>
+        </div>
+        <div class="no-m-b"><a class="h5 color-inherit" href="##ITEMURL##">##PRODUCTNAME##</a></div>
+        <div>
+          <ac:visibilityarea id="ltrRetailPrice">
+            <div class="CategoryProductRetailArea">
+              <div class="text-muted list-view-only size-small"><del>$$RETAILPRICE$$</del></div>
+            </div>
+          </ac:visibilityarea>
+          
+          <ac:visibilityarea id="ltrWasPrice">
+            <div class="CategoryWasPriceArea in-block">
+              <div class="text-muted list-view-only size-small"><del>$$WASPRICE$$</del></div>
+            </div>
+          </ac:visibilityarea>
+          <ac:visibilityarea id="ltrPrice">
+            <div class="text-muted in-block">$$PRICE$$</div>
+          </ac:visibilityarea>
+        </div>
+        <ac:visibilityarea id="ProductRatingArea">
+          
+          <div class="CategoryProductReview center">
+            <div class="in-block v-mid">$$AVERAGEREVIEWRATINGSTARS$$</div> ##IF[ReviewCount!=0]## <div class="v-mid in-block">(##REVIEWCOUNT##)</div> ##ENDIF##
+          </div>
+        </ac:visibilityarea>
+        <div class="list-view-only">
+          <ac:visibilityarea id="lblAvailability">
+            <div class="CategoryProductAvailability text-muted size-small">
+              $$AVAILABILITY$$
+            </div>
+          </ac:visibilityarea>
+          
+          
+          <ac:visibilityarea id="MapPricingLink">
+            <div class="CategoryMapPricingArea">
+              $$MAPPRICINGLINK$$
+            </div>
+          </ac:visibilityarea>
+          
+          
+          <ac:visibilityarea id="hlMfgLink">
+            <span class="CategoryProductMfgName">$$MANUFACTURERLINK$$</span>
+          </ac:visibilityarea>
+          
+          <ac:visibilityarea id="lblItemNr">
+            $$ITEMNUMBER$$
+          </ac:visibilityarea>
+          
+          <ac:visibilityarea id="rpDiscountList">
+            $$DISCOUNTLIST$$
+          </ac:visibilityarea>
+          <div class="pad-t-20">
+            <p>##TRIM[500]## ##LONGDESCRIPTION1## ##ENDTRIM##</p>
+          </div>
+        </div>
+      </div>  
+      
+    </div>
+    
+  </ac:layoutarea>
+  
+  <script>
+    $(function(){
+      $(".CategoryProductQuantityTextbox").qtySpinner()
+    });
+  </script>
+  <ac:visibilityarea id="BottomNavigationArea">
+    <div class="clearfix pad-20 no-pad-lr">
+      <ac:layoutarea id="ProductListPaging">
+        <div class="center">
+          <ul class="pagination">
+            <li>$$PREVIOUS$$</li>
+            $$PAGES$$
+            <li>$$NEXT$$</li>
+          </ul>
+        </div>
+      </ac:layoutarea>   
+    </div>  
+  </ac:visibilityarea>
+  
+  <ac:widgetarea id="Bottom">
+</ac:widgetarea>
+</ac:pagelayout>
