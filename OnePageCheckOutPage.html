@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col-sm-9">
         <ac:widgetarea id="Top">
-</ac:widgetarea>
+        </ac:widgetarea>
         
         
         <ac:visibilityarea id="ExistingCustomersArea">
@@ -26,7 +26,7 @@
         </ac:visibilityarea>
         
         <ac:layoutarea id="OnePageCheckoutBillingAddressArea">
-
+          
           <div class="panel">
             <div class="pad-20 full-input">
               <div class="h4 bold pad-b-20">
@@ -224,7 +224,7 @@
         
         
         <ac:visibilityarea id="RegistrationArea">
-
+          
           <div class="panel">
             <div class="pad-20 full-input">
               <div class="h4 bold pad-b-20">
@@ -255,7 +255,7 @@
         
         <ac:layoutarea id="OnePageCheckoutShippingAddressArea">
           
-
+          
           <ac:visibilityarea id="ShippingAddressArea">
             <div class="panel full-input">
               <div class="pad-20">
@@ -451,7 +451,7 @@
           </div>
         </ac:layoutarea>
         
-
+        
         <ac:visibilityarea id="CustomerCustomFieldsArea">
           <div class="panel">
             <div class="pad-20">
@@ -500,7 +500,7 @@
           </div>
         </ac:visibilityarea>
         
-
+        
         <ac:layoutarea id="OnePageCheckoutShippingArea">
           <ac:visibilityarea id="ShippingMethodArea">
             <div class="panel">
@@ -533,7 +533,7 @@
         
         <ac:visibilityarea id="PaymentMethodArea">
           <ac:layoutarea id="OnePageCheckoutPaymentArea">
-
+            
             
             <!--[ac] this section will be hidden on the front end to allow for the expandable payment sections -->
             <div class="panel payment-method-select">
@@ -555,7 +555,7 @@
             </div>
             
             <div class="payment-method CreditCard hide">
-
+              
               <div class="panel">
                 <div class="pad-20">
                   <div data-payment-name="CreditCard" class="payment-name h4 bold">
@@ -563,68 +563,70 @@
                   </div>
                   <ac:visibilityarea id="CreditCardArea">
                     <div class="credit-card full-input pad-t-20">
-                      <ac:visibilityarea id="SavedCardsArea">
-                        <div class="row">
-                          <div class="col-sm-8">
-                            <label>
-                              $$SAVEDCARDSDROPDOWN$$
-                              <span>$$SAVEDCARDSTEXT$$</span></label>
+                      $$MAXCREDITCARDSLABEL$$ 
+                      <ac:visibilityarea id="CreditCardForm">
+                        <ac:visibilityarea id="SavedCardsArea">
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <label>
+                                $$SAVEDCARDSDROPDOWN$$
+                                <span>$$SAVEDCARDSTEXT$$</span></label>
+                            </div>
                           </div>
-                        </div>
-                      </ac:visibilityarea>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <label>
-                            $$CREDITCARDTYPEDROPDOWN$$
-                            <span>$$CARDTYPELABEL$$</span>
-                            $$CARDTYPEERROR$$
-                          </label>
-                        </div>
-                      </div>
-                      <ac:visibilityarea id="CreditCardNumberArea">
+                        </ac:visibilityarea>
                         <div class="row">
-                          <div class="col-sm-8">
+                          <div class="col-sm-3">
                             <label>
-                              $$CARDNUMBERTEXTBOX$$
-                              <span>$$CARDNUMBERLABEL$$</span>
-                              $$CARDNUMBERERROR$$
+                              $$CREDITCARDTYPEDROPDOWN$$
+                              <span>$$CARDTYPELABEL$$</span>
+                              $$CARDTYPEERROR$$
                             </label>
                           </div>
                         </div>
-                      </ac:visibilityarea>
-                      <div class="row">
-                        <div class="col-sm-8">
-                          <label>
-                            $$NAMEONCARDTEXTBOX$$
-                            <span>$$NAMEONCARDLABEL$$</span>
-                            $$NAMEONCARDERROR$$
-                          </label>
+                        <ac:visibilityarea id="CreditCardNumberArea">
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <label>
+                                $$CARDNUMBERTEXTBOX$$
+                                <span>$$CARDNUMBERLABEL$$</span>
+                                $$CARDNUMBERERROR$$
+                              </label>
+                            </div>
+                          </div>
+                        </ac:visibilityarea>
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <label>
+                              $$NAMEONCARDTEXTBOX$$
+                              <span>$$NAMEONCARDLABEL$$</span>
+                              $$NAMEONCARDERROR$$
+                            </label>
+                          </div>
                         </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-3">
-                          <label>
-                            $$CVVTEXTBOX$$
+                        <div class="row">
+                          <div class="col-sm-3">
+                            <label>
+                              $$CVVTEXTBOX$$
+                              
+                              <span>$$CVVNUMBERLABEL$$ <em class="size-small">$$EXPLAINCVVLINK$$</em></span>
+                              $$CVVERROR$$
+                            </label>
                             
-                            <span>$$CVVNUMBERLABEL$$ <em class="size-small">$$EXPLAINCVVLINK$$</em></span>
-                            $$CVVERROR$$
-                          </label>
+                          </div>
                           
+                          <div class="col-sm-5">
+                            <label class="col-xs-5">
+                              $$EXPIRATIONMONTHDROPDOWN$$
+                              <span class="no-wrap">$$EXPIRATIONDATELABEL$$</span>
+                            </label>
+                            <label class="col-xs-2 no-m-b center size-big">/</label>
+                            <label class="col-xs-5">
+                              $$EXPIRATIONYEARDROPDOWN$$
+                            </label>
+                            <label>$$EXPIRATIONERROR$$</label>
+                          </div>
                         </div>
-                        
-                        <div class="col-sm-5">
-                          <label class="col-xs-5">
-                            $$EXPIRATIONMONTHDROPDOWN$$
-                            <span class="no-wrap">$$EXPIRATIONDATELABEL$$</span>
-                          </label>
-                          <label class="col-xs-2 no-m-b center size-big">/</label>
-                          <label class="col-xs-5">
-                            $$EXPIRATIONYEARDROPDOWN$$
-                          </label>
-                          <label>$$EXPIRATIONERROR$$</label>
-                        </div>
-                      </div>
-                      
+                      </ac:visibilityarea>
                     </div>
                     <ac:visibilityarea id="CreditCardPartialPaymentsShowHideArea">
                       <div class="pad-t-20">
@@ -647,7 +649,7 @@
               </div>
             </div>
             <div class="payment-method Echeck hide">
-
+              
               <div class="panel pad-20">
                 <div data-payment-name="Echeck" class="payment-name h4 bold">
                   Echeck
@@ -881,7 +883,7 @@
             </ac:visibilityarea>
             
             
-
+            
             <ac:visibilityarea id="CouponCodeArea">
               <div class="panel">
                 <div class="pad-20">
@@ -978,7 +980,7 @@
         
         
         
-
+        
         <div class="row">
           <ac:visibilityarea id="PublicOrderCommentsArea">
             <div class="col-sm-6">
@@ -1022,7 +1024,7 @@
             </ac:visibilityarea>
           </ac:layoutarea>
         </div>
-
+        
         <ac:visibilityarea id="MailingListsArea">
           <div class="panel pad-20">
             <div class="h4 bold pad-b-20">
@@ -1041,7 +1043,7 @@
         </ac:visibilityarea>
         
         
-
+        
         <div class="panel pad-20">
           <div class="f-right"><a href="/store/shopcart.aspx">Edit Cart</a></div>
           <div class="h4 bold pad-b-20">$$CONFIRMORDERTEXT$$</div>
@@ -1060,7 +1062,7 @@
             </table>
             
             <div class="hide">
-<!--[ac]
+              <!--[ac]
 This area gets dynamically pulled to the right column and "floats" with the page.
 
 -->
@@ -1174,7 +1176,7 @@ This area gets dynamically pulled to the right column and "floats" with the page
           </ac:layoutarea>
           <div>$$UPDATECARTLINK$$</div>
           <ac:widgetarea id="Bottom">
-</ac:widgetarea>
+          </ac:widgetarea>
         </div>
       </div>
       <div class="col-sm-3">
